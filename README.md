@@ -7,15 +7,15 @@ required dependencies on OS X.
 How to install these formulae?
 ------------------------------
 
-1. Run `brew tap homebrew/homebrew-versions`. Some formulae in this tap depends on
-   GStreamer 0.10 from the homebrew-versions repo.
+1. Run `brew tap homebrew/versions`. Some formulae in this tap depends on
+   GStreamer 0.10 from the homebrew/versions repo.
 
-2. Run `brew tap mopidy/homebrew-mopidy` to get access to formulae in this repo.
+2. Run `brew tap mopidy/mopidy` to get access to formulae in this repo.
 
 3. Then, run `brew install <formula>`.
 
    If the formula conflicts with one from another tap, you can `brew install
-   mopidy/homebrew-mopidy/<formula>`.
+   mopidy/mopidy/<formula>`.
 
    You can also install via URL: `brew install
    https://raw.github.com/mopidy/homebrew-mopidy/master/<formula>.rb`
