@@ -12,7 +12,9 @@ class Pykka < Formula
   def install
     Language::Python.each_python(build) do |python, version|
       system python, "setup.py", "install", "--prefix=#{prefix}"
-#        "--single-version-externally-managed", "--record=installed.txt"
+        # XXX This will be needed with the next release of Pykka, since it
+        # switches from distutils to setuptools.
+        #"--single-version-externally-managed", "--record=installed.txt"
     end
   end
 
