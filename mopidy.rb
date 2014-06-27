@@ -15,7 +15,6 @@ class Mopidy < Formula
   depends_on 'homebrew/versions/gst-plugins-good010' => [
     'with-flac',
     'with-jpeg',
-    'with-libcaca',
     'with-libshout',
     'with-libsoup',
     'with-speex',
