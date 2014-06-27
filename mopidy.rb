@@ -31,7 +31,6 @@ class Mopidy < Formula
     'with-lame',
     'with-libmms',
     'with-libvorbis',
-    'with-mad',
     'with-theora',
     'with-two-lame',
   ]
