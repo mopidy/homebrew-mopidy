@@ -35,7 +35,7 @@ class Mopidy < Formula
   ]
   depends_on 'homebrew/versions/gst-python010'
   depends_on 'mopidy/mopidy/pykka'
-  depends_on 'mopidy/mopidy/tornado'
+  depends_on 'mopidy/mopidy/python-tornado'
 
   def install
     system "python", "setup.py", "install", "--prefix=#{prefix}",

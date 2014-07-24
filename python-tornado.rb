@@ -1,6 +1,6 @@
 require 'formula'
 
-class Tornado < Formula
+class PythonTornado < Formula
   homepage 'http://www.tornadoweb.org/'
   url 'https://pypi.python.org/packages/source/t/tornado/tornado-4.0.tar.gz'
   sha1 '466e73db0d9e7a030f6933346e191637ae6ddd8a'
@@ -8,7 +8,7 @@ class Tornado < Formula
 
   depends_on :python => :recommended
   depends_on :python3 => :optional
-  depends_on 'mopidy/mopidy/backports.ssl_match_hostname'
+  depends_on 'mopidy/mopidy/python-backports.ssl-match-hostname'
   depends_on 'mopidy/mopidy/python-certifi'
 
   def install
