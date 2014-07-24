@@ -8,7 +8,7 @@ class PythonTornado < Formula
 
   depends_on :python => :recommended
   depends_on :python3 => :optional
-  depends_on 'mopidy/mopidy/python-backports.ssl-match-hostname'
+  depends_on 'mopidy/mopidy/python-backports-ssl-match-hostname'
   depends_on 'mopidy/mopidy/python-certifi'
 
   def install
