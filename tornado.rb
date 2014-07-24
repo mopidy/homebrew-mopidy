@@ -8,6 +8,8 @@ class Tornado < Formula
 
   depends_on :python => :recommended
   depends_on :python3 => :optional
+  depends_on 'mopidy/mopidy/backports.ssl_match_hostname'
+  depends_on 'mopidy/mopidy/python-certifi'
 
   def install
     Language::Python.each_python(build) do |python, version|
