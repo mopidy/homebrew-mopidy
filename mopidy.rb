@@ -2,8 +2,8 @@ require 'formula'
 
 class Mopidy < Formula
   homepage 'http://www.mopidy.com/'
-  url 'https://pypi.python.org/packages/source/M/Mopidy/Mopidy-0.19.2.tar.gz'
-  sha1 '2e10d75d212f90490bc8a047139a5f258c2ab453'
+  url 'https://pypi.python.org/packages/source/M/Mopidy/Mopidy-0.19.3.tar.gz'
+  sha1 'd6a4ae07829d41c4a42406267e91557a377b07ad'
   head 'https://github.com/mopidy/mopidy.git'
 
   depends_on :python
