@@ -58,11 +58,6 @@ class Mopidy < Formula
       <array>
         <string>#{opt_bin}/mopidy</string>
       </array>
-      <key>EnvironmentVariables</key>
-      <dict>
-        <key>PYTHONPATH</key>
-        <string>/usr/local/lib/python2.7/site-packages</string>
-      </dict>
       <key>RunAtLoad</key>
       <true/>
       <key>KeepAlive</key>
