@@ -67,8 +67,6 @@ class Mopidy < Formula
       <true/>
       <key>KeepAlive</key>
       <true/>
-      <key>WorkingDirectory</key>
-      <string>#{HOMEBREW_PREFIX}</string>
     </dict>
     </plist>
     EOS
