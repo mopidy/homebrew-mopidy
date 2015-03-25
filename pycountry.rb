@@ -2,8 +2,8 @@ require 'formula'
 
 class Pycountry < Formula
   homepage 'https://pypi.python.org/pypi/pycountry'
-  url 'https://pypi.python.org/packages/source/p/pycountry/pycountry-1.7.zip'
-  sha1 'ecfad435d67528148878d398bf3cd73c89815220'
+  url 'https://pypi.python.org/packages/source/p/pycountry/pycountry-1.10.zip'
+  sha1 'a7dcea993898d81ae23985d3c0d3a415be59b038'
   head 'https://bitbucket.org/gocept/pycountry', :using => :hg
 
   depends_on :python => :recommended
