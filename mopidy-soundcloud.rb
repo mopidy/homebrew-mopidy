@@ -2,8 +2,8 @@ require 'formula'
 
 class MopidySoundcloud < Formula
   homepage 'https://github.com/mopidy/mopidy-soundcloud'
-  url 'https://pypi.python.org/packages/source/M/Mopidy-SoundCloud/Mopidy-SoundCloud-1.2.5.tar.gz'
-  sha1 'b05e365c57ab89d90af80956e2804f86371459c8'
+  url 'https://pypi.python.org/packages/source/M/Mopidy-SoundCloud/Mopidy-SoundCloud-2.0.0.tar.gz'
+  sha1 '6874188c515b03b2cd4a6a64a67c9a9d098099f4'
   head 'https://github.com/mopidy/mopidy-soundcloud.git'
 
   depends_on :python
