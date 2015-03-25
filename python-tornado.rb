@@ -2,8 +2,8 @@ require 'formula'
 
 class PythonTornado < Formula
   homepage 'http://www.tornadoweb.org/'
-  url 'https://pypi.python.org/packages/source/t/tornado/tornado-4.0.tar.gz'
-  sha1 '466e73db0d9e7a030f6933346e191637ae6ddd8a'
+  url 'https://pypi.python.org/packages/source/t/tornado/tornado-4.1.tar.gz'
+  sha1 'c6bd9ccd6d5449c36206ee83a02e8fc854158bf8'
   head 'https://github.com/tornadoweb/tornado.git'
 
   depends_on :python => :recommended
