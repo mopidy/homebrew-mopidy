@@ -2,8 +2,8 @@ require 'formula'
 
 class Pyspotify < Formula
   homepage 'http://pyspotify.mopidy.com/'
-  url 'https://pypi.python.org/packages/source/p/pyspotify/pyspotify-1.11.tar.gz'
-  sha1 'e56ccbb600e653fd8bbbaa1fe502a00bb7e0a9f1'
+  url 'https://pypi.python.org/packages/source/p/pyspotify/pyspotify-1.12.tar.gz'
+  sha1 'c6421b9f9c8cd1ba013c04abfe4397aa0f1d47c2'
   head 'https://github.com/mopidy/pyspotify.git', :branch => "v1.x/develop"
 
   depends_on :python
