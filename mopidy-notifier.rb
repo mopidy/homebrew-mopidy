@@ -2,8 +2,8 @@ require 'formula'
 
 class MopidyNotifier < Formula
   homepage 'https://github.com/sauberfred/mopidy-notifier'
-  url 'https://pypi.python.org/packages/source/M/Mopidy-Notifier/Mopidy-Notifier-0.3.0.tar.gz'
-  sha1 'ee71ef9645276703d90d27983bf60156b1b774ca'
+  url 'https://pypi.python.org/packages/source/M/Mopidy-Notifier/Mopidy-Notifier-0.3.2.tar.gz'
+  sha1 'f3afe6cb2a215d1a0cd645c1e4ae85543246a0e5'
   head 'https://github.com/sauberfred/mopidy-notifier.git'
 
   depends_on :python
