@@ -2,8 +2,8 @@ require 'formula'
 
 class MopidyDirble < Formula
   homepage 'https://github.com/mopidy/mopidy-dirble'
-  url 'https://pypi.python.org/packages/source/M/Mopidy-Dirble/Mopidy-Dirble-0.1.1.tar.gz'
-  sha1 'ef14e9c8316265d2739e4b0fe607e8f3d773ebc4'
+  url 'https://pypi.python.org/packages/source/M/Mopidy-Dirble/Mopidy-Dirble-1.0.0.tar.gz'
+  sha1 '51d42bc76e80f0c2c3aeeb2b98380e0e23bf82c7'
   head 'https://github.com/mopidy/mopidy-dirble.git'
 
   depends_on :python
