@@ -2,8 +2,8 @@ require 'formula'
 
 class MopidySpotify < Formula
   homepage 'https://github.com/mopidy/mopidy-spotify'
-  url 'https://pypi.python.org/packages/source/M/Mopidy-Spotify/Mopidy-Spotify-1.2.0.tar.gz'
-  sha1 '29bd649290cedb856192d918d53563175c63a03a'
+  url 'https://pypi.python.org/packages/source/M/Mopidy-Spotify/Mopidy-Spotify-1.3.0.tar.gz'
+  sha1 'feeac7e8187e3c4d4a0e8ced8bdb2c41924f6840'
   head 'https://github.com/mopidy/mopidy-spotify.git'
 
   depends_on :python
