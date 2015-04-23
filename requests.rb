@@ -2,8 +2,8 @@ require 'formula'
 
 class Requests < Formula
   homepage 'http://python-requests.org/'
-  url 'https://pypi.python.org/packages/source/r/requests/requests-2.6.0.tar.gz'
-  sha1 'ad7327c73e8be8c188ad489d511097202b1fef12'
+  url 'https://pypi.python.org/packages/source/r/requests/requests-2.6.2.tar.gz'
+  sha1 'fb71223cbdd4b141bb27bc69e9640f0e407b8451'
   head 'https://github.com/kennethreitz/requests.git'
 
   depends_on :python => :recommended
