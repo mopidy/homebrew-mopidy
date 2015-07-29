@@ -2,8 +2,8 @@ require 'formula'
 
 class Pykka < Formula
   homepage 'http://www.pykka.org/'
-  url 'https://pypi.python.org/packages/source/P/Pykka/Pykka-1.2.0.tar.gz'
-  sha1 '566f9281f597a4254ed8c9360b30e0d82891585b'
+  url 'https://pypi.python.org/packages/source/P/Pykka/Pykka-1.2.1.tar.gz'
+  sha1 '7a9e895af8af6cb7e3115666264c58b3f5538b0a'
   head 'https://github.com/jodal/pykka.git'
 
   depends_on :python => :recommended
@@ -11,10 +11,8 @@ class Pykka < Formula
 
   def install
     Language::Python.each_python(build) do |python, version|
-      system python, "setup.py", "install", "--prefix=#{prefix}"
-        # XXX This will be needed with the next release of Pykka, since it
-        # switches from distutils to setuptools.
-        #"--single-version-externally-managed", "--record=installed.txt"
+      system python, "setup.py", "install", "--prefix=#{prefix}",
+        "--single-version-externally-managed", "--record=installed.txt"
     end
   end
 
