@@ -2,8 +2,8 @@ require 'formula'
 
 class Mopidy < Formula
   homepage 'http://www.mopidy.com/'
-  url 'https://pypi.python.org/packages/source/M/Mopidy/Mopidy-1.0.8.tar.gz'
-  sha1 '45acdb1d2cc9165b51a1d0064a06e127190e2fef'
+  url 'https://pypi.python.org/packages/source/M/Mopidy/Mopidy-1.1.0.tar.gz'
+  sha1 '│2c8b8dbe6b291aa77598fbc095641012af296979'
   head 'https://github.com/mopidy/mopidy.git'
 
   depends_on :python
@@ -37,6 +37,7 @@ class Mopidy < Formula
   depends_on 'homebrew/versions/gst-python010'
   depends_on 'mopidy/mopidy/pykka'
   depends_on 'mopidy/mopidy/python-tornado'
+  depends_on 'mopidy/mopidy/requests'
 
   def install
     system "python", "setup.py", "install", "--prefix=#{prefix}",
