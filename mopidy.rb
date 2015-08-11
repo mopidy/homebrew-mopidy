@@ -3,7 +3,7 @@ require 'formula'
 class Mopidy < Formula
   homepage 'http://www.mopidy.com/'
   url 'https://pypi.python.org/packages/source/M/Mopidy/Mopidy-1.1.0.tar.gz'
-  sha1 '│2c8b8dbe6b291aa77598fbc095641012af296979'
+  sha1 '2c8b8dbe6b291aa77598fbc095641012af296979'
   head 'https://github.com/mopidy/mopidy.git'
 
   depends_on :python
