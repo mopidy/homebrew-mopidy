@@ -1,8 +1,8 @@
 class Pycountry < Formula
-  homepage 'https://pypi.python.org/pypi/pycountry'
-  url 'https://pypi.python.org/packages/source/p/pycountry/pycountry-1.10.zip'
-  sha1 'a7dcea993898d81ae23985d3c0d3a415be59b038'
-  head 'https://bitbucket.org/gocept/pycountry', :using => :hg
+  homepage "https://pypi.python.org/pypi/pycountry"
+  url "https://pypi.python.org/packages/source/p/pycountry/pycountry-1.10.zip"
+  sha1 "a7dcea993898d81ae23985d3c0d3a415be59b038"
+  head "https://bitbucket.org/gocept/pycountry", :using => :hg
 
   depends_on :python => :recommended
   depends_on :python3 => :optional
