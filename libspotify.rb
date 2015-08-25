@@ -31,4 +31,18 @@ class Libspotify < Formula
     Cflags: -I${includedir}
     EOS
   end
+
+  test do
+    (testpath/"test.c").write <<-EOS.undent
+      #include <string.h>
+      #include <libspotify/api.h>
+
+      int main()
+      {
+        return strcmp(sp_error_message(SP_ERROR_OK), "No error");
+      }
+    EOS
+    system ENV.cc, "test.c", "-lspotify", "-o", "test"
+    system "./test"
+  end
 end
