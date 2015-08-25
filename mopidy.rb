@@ -34,7 +34,7 @@ class Mopidy < Formula
     "with-two-lame"
   ]
   depends_on "homebrew/versions/gst-python010"
-  depends_on "mopidy/mopidy/pykka"
+  depends_on "mopidy/mopidy/python-pykka"
   depends_on "mopidy/mopidy/python-tornado"
   depends_on "mopidy/mopidy/requests"
 

@@ -1,3 +1,4 @@
 {
-    "pycountry": "python-pycountry"
+    "pycountry": "python-pycountry",
+    "pykka": "python-pykka"
 }

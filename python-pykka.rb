@@ -1,4 +1,4 @@
-class Pykka < Formula
+class PythonPykka < Formula
   desc "Python implementation of the actor model"
   homepage "http://www.pykka.org/"
   url "https://pypi.python.org/packages/source/P/Pykka/Pykka-1.2.1.tar.gz"

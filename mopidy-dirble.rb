@@ -7,7 +7,7 @@ class MopidyDirble < Formula
 
   depends_on :python
   depends_on "mopidy/mopidy/mopidy"
-  depends_on "mopidy/mopidy/pykka"
+  depends_on "mopidy/mopidy/python-pykka"
   depends_on "mopidy/mopidy/python-pycountry"
   depends_on "mopidy/mopidy/requests"
 
