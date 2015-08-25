@@ -1,7 +1,7 @@
 class Pyspotify < Formula
   homepage "http://pyspotify.mopidy.com/"
   url "https://pypi.python.org/packages/source/p/pyspotify/pyspotify-1.12.tar.gz"
-  sha1 "c6421b9f9c8cd1ba013c04abfe4397aa0f1d47c2"
+  sha256 "0f2e80194c3bb700ea65bc3d311a58bbab1909df07a396513f72d97a259e2d34"
   head "https://github.com/mopidy/pyspotify.git", :branch => "v1.x/develop"
 
   depends_on :python

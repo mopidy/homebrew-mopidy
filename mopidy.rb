@@ -1,7 +1,7 @@
 class Mopidy < Formula
   homepage "http://www.mopidy.com/"
   url "https://pypi.python.org/packages/source/M/Mopidy/Mopidy-1.1.0.tar.gz"
-  sha1 "2c8b8dbe6b291aa77598fbc095641012af296979"
+  sha256 "062ec9df8c5bc641b4f3f36ba0ef0da26d88f10511b99acd62dea040c8fb1f37"
   head "https://github.com/mopidy/mopidy.git"
 
   depends_on :python

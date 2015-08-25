@@ -1,7 +1,7 @@
 class PythonTornado < Formula
   homepage "http://www.tornadoweb.org/"
   url "https://pypi.python.org/packages/source/t/tornado/tornado-4.1.tar.gz"
-  sha1 "c6bd9ccd6d5449c36206ee83a02e8fc854158bf8"
+  sha256 "99abd3aede45c93739346ee7384e710120121c3744da155d5cff1c0101702228"
   head "https://github.com/tornadoweb/tornado.git"
 
   depends_on :python => :recommended

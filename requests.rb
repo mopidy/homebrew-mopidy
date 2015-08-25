@@ -1,7 +1,7 @@
 class Requests < Formula
   homepage "http://python-requests.org/"
   url "https://pypi.python.org/packages/source/r/requests/requests-2.6.2.tar.gz"
-  sha1 "fb71223cbdd4b141bb27bc69e9640f0e407b8451"
+  sha256 "0577249d4b6c4b11fd97c28037e98664bfaa0559022fee7bcef6b752a106e505"
   head "https://github.com/kennethreitz/requests.git"
 
   depends_on :python => :recommended

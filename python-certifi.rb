@@ -1,7 +1,7 @@
 class PythonCertifi < Formula
   homepage "https://pypi.python.org/pypi/certifi"
   url "https://pypi.python.org/packages/source/c/certifi/certifi-14.05.14.tar.gz"
-  sha1 "f53dc8f57aaf6d69c183ebadcec52ece0a55cc3f"
+  sha256 "1e1bcbacd6357c151ae37cf0290dcc809721d32ce21fd6b7339568f3ddef1b69"
   head "https://github.com/certifi/python-certifi.git"
 
   depends_on :python => :recommended

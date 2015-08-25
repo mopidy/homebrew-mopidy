@@ -1,7 +1,7 @@
 class MopidyDirble < Formula
   homepage "https://github.com/mopidy/mopidy-dirble"
   url "https://pypi.python.org/packages/source/M/Mopidy-Dirble/Mopidy-Dirble-1.1.2.tar.gz"
-  sha1 "d2545c6a2e1e3716ef0fa301934d9067ef2542c8"
+  sha256 "afb20a311a73e25c13cfede140bb0ceca588402d42becdd8c9afb1fd35c7a1af"
   head "https://github.com/mopidy/mopidy-dirble.git"
 
   depends_on :python
