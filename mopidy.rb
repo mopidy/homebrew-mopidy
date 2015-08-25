@@ -8,7 +8,7 @@ class Mopidy < Formula
   depends_on "homebrew/versions/gst-plugins-base010" => [
     "with-libogg",
     "with-libvorbis",
-    "with-theora",
+    "with-theora"
   ]
   depends_on "homebrew/versions/gst-plugins-good010" => [
     "with-flac",
@@ -16,12 +16,12 @@ class Mopidy < Formula
     "with-libshout",
     "with-libsoup",
     "with-speex",
-    "with-taglib",
+    "with-taglib"
   ]
   depends_on "homebrew/versions/gst-plugins-bad010" => [
     "with-faad2",
     "with-libmms",
-    "with-libsndfile",
+    "with-libsndfile"
   ]
   depends_on "homebrew/versions/gst-plugins-ugly010" => [
     "with-flac",
@@ -30,7 +30,7 @@ class Mopidy < Formula
     "with-libvorbis",
     "with-mad",
     "with-theora",
-    "with-two-lame",
+    "with-two-lame"
   ]
   depends_on "homebrew/versions/gst-python010"
   depends_on "mopidy/mopidy/pykka"
