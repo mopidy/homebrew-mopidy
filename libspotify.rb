@@ -7,7 +7,7 @@ class Libspotify < Formula
     (include+"libspotify").install "libspotify.framework/Versions/12.1.51/Headers/api.h"
     lib.install "libspotify.framework/Versions/12.1.51/libspotify" => "libspotify.12.1.51.dylib"
     doc.install Dir["docs/*"]
-    doc.install %w(ChangeLog README LICENSE licenses.xhtml examples)
+    doc.install %w[ChangeLog README LICENSE licenses.xhtml examples]
     man3.install Dir["man3/*"]
     lib.install_symlink "libspotify.12.1.51.dylib" => "libspotify.dylib"
     lib.install_symlink "libspotify.12.1.51.dylib" => "libspotify.12.dylib"
