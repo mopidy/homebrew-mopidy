@@ -1,4 +1,5 @@
 {
     "pycountry": "python-pycountry",
-    "pykka": "python-pykka"
+    "pykka": "python-pykka",
+    "pyspotify": "python-spotify"
 }

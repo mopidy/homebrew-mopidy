@@ -8,7 +8,7 @@ class MopidySpotify < Formula
   depends_on :python
   depends_on "mopidy/mopidy/mopidy"
   depends_on "mopidy/mopidy/python-pykka"
-  depends_on "mopidy/mopidy/pyspotify"
+  depends_on "mopidy/mopidy/python-spotify"
 
   def install
     system "python", *Language::Python.setup_install_args(prefix)
