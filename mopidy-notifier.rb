@@ -12,8 +12,7 @@ class MopidyNotifier < Formula
   depends_on 'terminal-notifier'
 
   def install
-    system "python", "setup.py", "install", "--prefix=#{prefix}",
-      "--record=installed.txt", "--single-version-externally-managed"
+    system "python", *Language::Python.setup_install_args(prefix)
   end
 
   def test

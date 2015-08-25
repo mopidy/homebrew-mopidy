@@ -10,7 +10,7 @@ class Pyspotify < Formula
   depends_on 'mopidy/mopidy/libspotify'
 
   def install
-    system "python", "setup.py", "install", "--prefix=#{prefix}"
+    system "python", *Language::Python.setup_install_args(prefix)
   end
 
   def test

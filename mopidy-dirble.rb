@@ -13,8 +13,7 @@ class MopidyDirble < Formula
   depends_on 'mopidy/mopidy/requests'
 
   def install
-    system "python", "setup.py", "install", "--prefix=#{prefix}",
-      "--record=installed.txt", "--single-version-externally-managed"
+    system "python", *Language::Python.setup_install_args(prefix)
   end
 
   def test

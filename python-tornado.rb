@@ -13,8 +13,7 @@ class PythonTornado < Formula
 
   def install
     Language::Python.each_python(build) do |python, version|
-      system python, "setup.py", "install", "--prefix=#{prefix}",
-        "--single-version-externally-managed", "--record=installed.txt"
+      system python, *Language::Python.setup_install_args(prefix)
     end
   end
 
