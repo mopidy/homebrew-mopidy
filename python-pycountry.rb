@@ -1,4 +1,4 @@
-class Pycountry < Formula
+class PythonPycountry < Formula
   desc "Python library for ISO country, language, currency and scripts"
   homepage "https://pypi.python.org/pypi/pycountry"
   url "https://pypi.python.org/packages/source/p/pycountry/pycountry-1.10.zip"
