@@ -13,7 +13,7 @@ class MopidySpotify < Formula
     system "python", *Language::Python.setup_install_args(prefix)
   end
 
-  def test
+  test do
     system "python", "-c", "import mopidy_spotify"
   end
 end

@@ -13,7 +13,7 @@ class PythonBackportsSslMatchHostname < Formula
     end
   end
 
-  def test
+  test do
     Language::Python.each_python(build) do |python, version|
       system python, "-c", "import backports.ssl_match_hostname"
     end

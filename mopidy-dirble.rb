@@ -14,7 +14,7 @@ class MopidyDirble < Formula
     system "python", *Language::Python.setup_install_args(prefix)
   end
 
-  def test
+  test do
     system "python", "-c", "import mopidy_dirble"
   end
 end
