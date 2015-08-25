@@ -1,5 +1,6 @@
 {
     "pycountry": "python-pycountry",
     "pykka": "python-pykka",
-    "pyspotify": "python-spotify"
+    "pyspotify": "python-spotify",
+    "requests": "python-requests"
 }

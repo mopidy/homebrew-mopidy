@@ -8,7 +8,7 @@ class MopidySoundcloud < Formula
   depends_on :python
   depends_on "mopidy/mopidy/mopidy"
   depends_on "mopidy/mopidy/python-pykka"
-  depends_on "mopidy/mopidy/requests"
+  depends_on "mopidy/mopidy/python-requests"
 
   def install
     system "python", *Language::Python.setup_install_args(prefix)

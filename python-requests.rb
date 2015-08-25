@@ -1,4 +1,4 @@
-class Requests < Formula
+class PythonRequests < Formula
   desc "Python library for making HTTP requests"
   homepage "http://python-requests.org/"
   url "https://pypi.python.org/packages/source/r/requests/requests-2.6.2.tar.gz"

@@ -36,7 +36,7 @@ class Mopidy < Formula
   depends_on "homebrew/versions/gst-python010"
   depends_on "mopidy/mopidy/python-pykka"
   depends_on "mopidy/mopidy/python-tornado"
-  depends_on "mopidy/mopidy/requests"
+  depends_on "mopidy/mopidy/python-requests"
 
   def install
     system "python", *Language::Python.setup_install_args(prefix)
