@@ -1,4 +1,5 @@
 class MopidySoundcloud < Formula
+  desc "Mopidy extension for playing music from SoundCloud"
   homepage "https://github.com/mopidy/mopidy-soundcloud"
   url "https://pypi.python.org/packages/source/M/Mopidy-SoundCloud/Mopidy-SoundCloud-2.0.0.tar.gz"
   sha256 "cb98ec6bb8c4639b51771de552bf4a22fffb651c869dbaa46936cb8585b7b68c"

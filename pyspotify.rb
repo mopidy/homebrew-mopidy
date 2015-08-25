@@ -1,4 +1,5 @@
 class Pyspotify < Formula
+  desc "Python binding for libspotify"
   homepage "http://pyspotify.mopidy.com/"
   url "https://pypi.python.org/packages/source/p/pyspotify/pyspotify-1.12.tar.gz"
   sha256 "0f2e80194c3bb700ea65bc3d311a58bbab1909df07a396513f72d97a259e2d34"

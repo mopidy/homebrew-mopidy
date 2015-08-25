@@ -1,4 +1,5 @@
 class Requests < Formula
+  desc "Python library for making HTTP requests"
   homepage "http://python-requests.org/"
   url "https://pypi.python.org/packages/source/r/requests/requests-2.6.2.tar.gz"
   sha256 "0577249d4b6c4b11fd97c28037e98664bfaa0559022fee7bcef6b752a106e505"

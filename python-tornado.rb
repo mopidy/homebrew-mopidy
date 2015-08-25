@@ -1,4 +1,5 @@
 class PythonTornado < Formula
+  desc "Python web framework and asynchronous networking library"
   homepage "http://www.tornadoweb.org/"
   url "https://pypi.python.org/packages/source/t/tornado/tornado-4.1.tar.gz"
   sha256 "99abd3aede45c93739346ee7384e710120121c3744da155d5cff1c0101702228"
