@@ -1,5 +1,3 @@
-require 'formula'
-
 class Mopidy < Formula
   homepage 'http://www.mopidy.com/'
   url 'https://pypi.python.org/packages/source/M/Mopidy/Mopidy-1.1.0.tar.gz'

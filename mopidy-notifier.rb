@@ -1,5 +1,3 @@
-require 'formula'
-
 class MopidyNotifier < Formula
   homepage 'https://github.com/sauberfred/mopidy-notifier'
   url 'https://pypi.python.org/packages/source/M/Mopidy-Notifier/Mopidy-Notifier-0.3.3.tar.gz'

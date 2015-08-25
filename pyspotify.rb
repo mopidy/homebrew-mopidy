@@ -1,5 +1,3 @@
-require 'formula'
-
 class Pyspotify < Formula
   homepage 'http://pyspotify.mopidy.com/'
   url 'https://pypi.python.org/packages/source/p/pyspotify/pyspotify-1.12.tar.gz'

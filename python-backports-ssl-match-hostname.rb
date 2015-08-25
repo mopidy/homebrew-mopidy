@@ -1,5 +1,3 @@
-require 'formula'
-
 class PythonBackportsSslMatchHostname < Formula
   homepage 'https://pypi.python.org/pypi/backports.ssl_match_hostname'
   url 'https://pypi.python.org/packages/source/b/backports.ssl_match_hostname/backports.ssl_match_hostname-3.4.0.2.tar.gz'

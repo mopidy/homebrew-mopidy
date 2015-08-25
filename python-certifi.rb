@@ -1,5 +1,3 @@
-require 'formula'
-
 class PythonCertifi < Formula
   homepage 'https://pypi.python.org/pypi/certifi'
   url 'https://pypi.python.org/packages/source/c/certifi/certifi-14.05.14.tar.gz'

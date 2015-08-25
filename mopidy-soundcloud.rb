@@ -1,5 +1,3 @@
-require 'formula'
-
 class MopidySoundcloud < Formula
   homepage 'https://github.com/mopidy/mopidy-soundcloud'
   url 'https://pypi.python.org/packages/source/M/Mopidy-SoundCloud/Mopidy-SoundCloud-2.0.0.tar.gz'

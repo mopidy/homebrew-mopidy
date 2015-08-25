@@ -1,5 +1,3 @@
-require 'formula'
-
 class PythonTornado < Formula
   homepage 'http://www.tornadoweb.org/'
   url 'https://pypi.python.org/packages/source/t/tornado/tornado-4.1.tar.gz'

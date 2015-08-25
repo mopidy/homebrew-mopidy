@@ -1,5 +1,3 @@
-require 'formula'
-
 class Libspotify < Formula
   homepage 'http://developer.spotify.com/en/libspotify/overview/'
   url 'https://developer.spotify.com/download/libspotify/libspotify-12.1.51-Darwin-universal.zip'

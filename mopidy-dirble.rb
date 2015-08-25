@@ -1,5 +1,3 @@
-require 'formula'
-
 class MopidyDirble < Formula
   homepage 'https://github.com/mopidy/mopidy-dirble'
   url 'https://pypi.python.org/packages/source/M/Mopidy-Dirble/Mopidy-Dirble-1.1.2.tar.gz'

@@ -1,5 +1,3 @@
-require 'formula'
-
 class Requests < Formula
   homepage 'http://python-requests.org/'
   url 'https://pypi.python.org/packages/source/r/requests/requests-2.6.2.tar.gz'

@@ -1,5 +1,3 @@
-require 'formula'
-
 class Pykka < Formula
   homepage 'http://www.pykka.org/'
   url 'https://pypi.python.org/packages/source/P/Pykka/Pykka-1.2.1.tar.gz'

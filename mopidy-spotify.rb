@@ -1,5 +1,3 @@
-require 'formula'
-
 class MopidySpotify < Formula
   homepage 'https://github.com/mopidy/mopidy-spotify'
   url 'https://pypi.python.org/packages/source/M/Mopidy-Spotify/Mopidy-Spotify-1.4.0.tar.gz'
