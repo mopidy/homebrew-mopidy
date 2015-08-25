@@ -1,12 +1,13 @@
 class PythonSpotify < Formula
   desc "Python binding for libspotify"
   homepage "http://pyspotify.mopidy.com/"
-  url "https://pypi.python.org/packages/source/p/pyspotify/pyspotify-1.12.tar.gz"
-  sha256 "0f2e80194c3bb700ea65bc3d311a58bbab1909df07a396513f72d97a259e2d34"
-  head "https://github.com/mopidy/pyspotify.git", :branch => "v1.x/develop"
+  url "https://pypi.python.org/packages/source/p/pyspotify/pyspotify-2.0.2.tar.gz"
+  sha256 "46211fcf7746de027515ecf2c41cd779c5fe7f9103fce52cff33f3726c3bc8b5"
+  head "https://github.com/mopidy/pyspotify.git", :branch => "v2.x/develop"
 
   depends_on :python
   depends_on "mopidy/mopidy/libspotify"
+  depends_on "mopidy/mopidy/python-cffi"
 
   def install
     system "python", *Language::Python.setup_install_args(prefix)
