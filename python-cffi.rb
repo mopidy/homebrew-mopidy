@@ -8,6 +8,7 @@ class PythonCffi < Formula
   depends_on :python => :recommended
   depends_on :python3 => :optional
   depends_on "libffi"
+  depends_on "mopidy/mopidy/python-pycparser"
 
   def install
     Language::Python.each_python(build) do |python, _version|
