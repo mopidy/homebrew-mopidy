@@ -1,8 +1,8 @@
 class MopidySpotify < Formula
   desc "Mopidy extension for playing music from Spotify"
   homepage "https://github.com/mopidy/mopidy-spotify"
-  url "https://pypi.python.org/packages/source/M/Mopidy-Spotify/Mopidy-Spotify-2.1.0.tar.gz"
-  sha256 "999a89136b94d1efee154f8b35cc8dda04de8ccc813d2fe56b6bf9a7d2275c03"
+  url "https://pypi.python.org/packages/source/M/Mopidy-Spotify/Mopidy-Spotify-2.2.0.tar.gz"
+  sha256 "8d688959d065d14acf6409cf81bc05836efcf650a154bb84b093cdd7c50b07e1"
   head "https://github.com/mopidy/mopidy-spotify.git"
 
   depends_on :python
