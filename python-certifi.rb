@@ -1,8 +1,8 @@
 class PythonCertifi < Formula
   desc "Python package for providing Mozilla's CA Bundle"
   homepage "https://pypi.python.org/pypi/certifi"
-  url "https://pypi.python.org/packages/source/c/certifi/certifi-14.05.14.tar.gz"
-  sha256 "1e1bcbacd6357c151ae37cf0290dcc809721d32ce21fd6b7339568f3ddef1b69"
+  url "https://pypi.python.org/packages/source/c/certifi/certifi-2015.11.20.1.tar.gz"
+  sha256 "30b0a7354a1b32caa8b4705d3f5fb2dadefac7ba4bf8af8a2176869f93e38f16"
   head "https://github.com/certifi/python-certifi.git"
 
   depends_on :python => :recommended
