@@ -1,8 +1,8 @@
 class PythonTornado < Formula
   desc "Python web framework and asynchronous networking library"
   homepage "http://www.tornadoweb.org/"
-  url "https://pypi.python.org/packages/source/t/tornado/tornado-4.1.tar.gz"
-  sha256 "99abd3aede45c93739346ee7384e710120121c3744da155d5cff1c0101702228"
+  url "https://pypi.python.org/packages/source/t/tornado/tornado-4.3.tar.gz"
+  sha256 "c9c2d32593d16eedf2cec1b6a41893626a2649b40b21ca9c4cac4243bde2efbf"
   head "https://github.com/tornadoweb/tornado.git"
 
   depends_on :python => :recommended
