@@ -1,14 +1,13 @@
 class MopidyDirble < Formula
   desc "Mopidy extension for the Dirble radio station directory"
   homepage "https://github.com/mopidy/mopidy-dirble"
-  url "https://pypi.python.org/packages/source/M/Mopidy-Dirble/Mopidy-Dirble-1.1.2.tar.gz"
-  sha256 "afb20a311a73e25c13cfede140bb0ceca588402d42becdd8c9afb1fd35c7a1af"
+  url "https://pypi.python.org/packages/source/M/Mopidy-Dirble/Mopidy-Dirble-1.3.0.tar.gz"
+  sha256 "ac018cb8534d2baec1981406251e1d6f00d172577554eae0783bc4ee68c94661"
   head "https://github.com/mopidy/mopidy-dirble.git"
 
   depends_on :python
   depends_on "mopidy/mopidy/mopidy"
   depends_on "mopidy/mopidy/python-pykka"
-  depends_on "mopidy/mopidy/python-pycountry"
   depends_on "mopidy/mopidy/python-requests"
 
   def install

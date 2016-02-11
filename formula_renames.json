@@ -1,5 +1,4 @@
 {
-    "pycountry": "python-pycountry",
     "pykka": "python-pykka",
     "pyspotify": "python-spotify",
     "requests": "python-requests"
