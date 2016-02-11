@@ -1,8 +1,8 @@
 class PythonRequests < Formula
   desc "Python library for making HTTP requests"
   homepage "http://python-requests.org/"
-  url "https://pypi.python.org/packages/source/r/requests/requests-2.7.0.tar.gz"
-  sha256 "398a3db6d61899d25fd4a06c6ca12051b0ce171d705decd7ed5511517b4bb93d"
+  url "https://pypi.python.org/packages/source/r/requests/requests-2.9.1.tar.gz"
+  sha256 "c577815dd00f1394203fc44eb979724b098f88264a9ef898ee45b8e5e9cf587f"
   head "https://github.com/kennethreitz/requests.git"
 
   depends_on :python => :recommended
