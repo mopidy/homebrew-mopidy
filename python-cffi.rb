@@ -1,8 +1,8 @@
 class PythonCffi < Formula
   desc "C Foreign Function Interface for Python"
   homepage "https://cffi.readthedocs.org/"
-  url "https://pypi.python.org/packages/source/c/cffi/cffi-1.5.0.tar.gz"
-  sha256 "44f76f6c3fc654860821785192eca29bd66531af57d09b681e6d52584604a7e7"
+  url "https://pypi.python.org/packages/source/c/cffi/cffi-1.5.2.tar.gz"
+  sha256 "da9bde99872e46f7bb5cff40a9b1cc08406765efafb583c704de108b6cb821dd"
   head "https://bitbucket.org/cffi/cffi", :using => :hg
 
   depends_on :python => :recommended
