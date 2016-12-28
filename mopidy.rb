@@ -13,9 +13,7 @@ class Mopidy < Formula
   ]
   depends_on "gst-plugins-good" => [
     "with-flac",
-    "with-jpeg",
     "with-libshout",
-    "with-libsoup",
     "with-speex",
     "with-taglib"
   ]
