@@ -9,6 +9,7 @@ class Mopidy < Formula
   depends_on "gst-plugins-base" => [
     "with-libogg",
     "with-libvorbis",
+    "with-opus",
     "with-theora"
   ]
   depends_on "gst-plugins-good" => [
