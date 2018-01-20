@@ -5,8 +5,8 @@ class PythonRequests < Formula
   sha256 "b2ff053e93ef11ea08b0e596a1618487c4e4c5f1006d7a1706e3671c57dea385"
   head "https://github.com/kennethreitz/requests.git"
 
-  depends_on :python => :recommended
-  depends_on :python3 => :optional
+  depends_on "python" => :recommended
+  depends_on "python3" => :optional
 
   def install
     Language::Python.each_python(build) do |python, _version|

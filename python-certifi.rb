@@ -5,8 +5,8 @@ class PythonCertifi < Formula
   sha256 "99864ed602d8a9d212e339b15ffa438895002eda7b7db20dca5309dac9605ae9"
   head "https://github.com/certifi/python-certifi.git"
 
-  depends_on :python => :recommended
-  depends_on :python3 => :optional
+  depends_on "python" => :recommended
+  depends_on "python3" => :optional
 
   def install
     Language::Python.each_python(build) do |python, _version|

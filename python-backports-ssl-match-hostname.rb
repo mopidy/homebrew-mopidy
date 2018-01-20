@@ -5,8 +5,8 @@ class PythonBackportsSslMatchHostname < Formula
   sha256 "502ad98707319f4a51fa2ca1c677bd659008d27ded9f6380c79e8932e38dcdf2"
   head "https://bitbucket.org/brandon/backports.ssl_match_hostname"
 
-  depends_on :python => :recommended
-  depends_on :python3 => :optional
+  depends_on "python" => :recommended
+  depends_on "python3" => :optional
 
   def install
     Language::Python.each_python(build) do |python, _version|

@@ -5,8 +5,8 @@ class PythonCffi < Formula
   sha256 "6ed5dd6afd8361f34819c68aaebf9e8fc12b5a5893f91f50c9e50c8886bb60df"
   head "https://bitbucket.org/cffi/cffi", :using => :hg
 
-  depends_on :python => :recommended
-  depends_on :python3 => :optional
+  depends_on "python" => :recommended
+  depends_on "python3" => :optional
   depends_on "libffi"
   depends_on "mopidy/mopidy/python-pycparser"
 
