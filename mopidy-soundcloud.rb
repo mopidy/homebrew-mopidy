@@ -5,7 +5,7 @@ class MopidySoundcloud < Formula
   sha256 "374bf7ab496623f787ad2905575fce52df437e953c876486e059d8cb9aecc509"
   head "https://github.com/mopidy/mopidy-soundcloud.git"
 
-  depends_on :python
+  depends_on "python"
   depends_on "mopidy/mopidy/mopidy"
   depends_on "mopidy/mopidy/python-pykka"
   depends_on "mopidy/mopidy/python-requests"

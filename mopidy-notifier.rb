@@ -5,7 +5,7 @@ class MopidyNotifier < Formula
   sha256 "2bb1ab9ade3633269a5b4ff765fafad5f61e1cebd74e6d0671b60b8ea7501990"
   head "https://github.com/sauberfred/mopidy-notifier.git"
 
-  depends_on :python
+  depends_on "python"
   depends_on "mopidy/mopidy/mopidy"
   depends_on "mopidy/mopidy/python-pykka"
   depends_on "terminal-notifier"

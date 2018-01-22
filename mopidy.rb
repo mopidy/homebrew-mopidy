@@ -5,7 +5,7 @@ class Mopidy < Formula
   sha256 "297369a34ebd584b2fe25a7184f68fe876a149256549b03b503a55ede3f13f6a"
   head "https://github.com/mopidy/mopidy.git"
 
-  depends_on :python
+  depends_on "python"
   depends_on "gst-plugins-base" => [
     "with-libogg",
     "with-libvorbis",
