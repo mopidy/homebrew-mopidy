@@ -33,7 +33,10 @@ class Mopidy < Formula
     "with-theora",
     "with-two-lame"
   ]
-  depends_on "gst-python"
+  depends_on "gst-python" => [
+    "without-python",
+    "with-python@2"
+  ]
   depends_on "mopidy/mopidy/python-pykka"
   depends_on "mopidy/mopidy/python-tornado"
   depends_on "mopidy/mopidy/python-requests"
