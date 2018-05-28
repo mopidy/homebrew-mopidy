@@ -5,8 +5,8 @@ class PythonPylast < Formula
   sha256 "85f8dd96aef0ccba5f80379c3d7bc1fabd72f59aebab040daf40a8b72268f9bd"
   head "https://github.com/pylast/pylast.git"
 
-  depends_on "python" => :recommended
-  depends_on "python3" => :optional
+  depends_on "python@2" => :recommended if MacOS.version <= :snow_leopard
+  depends_on "python" => :optional
 
   def install
     Language::Python.each_python(build) do |python, _version|

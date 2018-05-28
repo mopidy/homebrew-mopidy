@@ -5,7 +5,7 @@ class MopidySpotify < Formula
   sha256 "f5123a4ce310eca7d16fcb693839729249df86610ed779e7cea17927b3ac8b66"
   head "https://github.com/mopidy/mopidy-spotify.git"
 
-  depends_on "python"
+  depends_on "python@2" if MacOS.version <= :snow_leopard
   depends_on "mopidy/mopidy/mopidy"
   depends_on "mopidy/mopidy/python-pykka"
   depends_on "mopidy/mopidy/python-requests"

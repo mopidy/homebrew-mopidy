@@ -5,8 +5,8 @@ class PythonTornado < Formula
   sha256 "371d0cf3d56c47accc66116a77ad558d76eebaa8458a6b677af71ca606522146"
   head "https://github.com/tornadoweb/tornado.git"
 
-  depends_on "python" => :recommended
-  depends_on "python3" => :optional
+  depends_on "python@2" if MacOS.version <= :snow_leopard
+  depends_on "python" => :optional
   depends_on "mopidy/mopidy/python-backports-abc"
   depends_on "mopidy/mopidy/python-backports-ssl-match-hostname"
   depends_on "mopidy/mopidy/python-certifi"

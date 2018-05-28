@@ -5,8 +5,8 @@ class PythonPycparser < Formula
   sha256 "7959b4a74abdc27b312fed1c21e6caf9309ce0b29ea86b591fd2e99ecdf27f73"
   head "https://github.com/eliben/pycparser.git"
 
-  depends_on "python" => :recommended
-  depends_on "python3" => :optional
+  depends_on "python@2" => :recommended if MacOS.version <= :snow_leopard
+  depends_on "python" => :optional
 
   def install
     Language::Python.each_python(build) do |python, _version|

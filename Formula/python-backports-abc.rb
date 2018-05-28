@@ -5,8 +5,8 @@ class PythonBackportsAbc < Formula
   sha256 "8b3e4092ba3d541c7a2f9b7d0d9c0275b21c6a01c53a61c731eba6686939d0a5"
   head "https://github.com/cython/backports_abc"
 
-  depends_on "python" => :recommended
-  depends_on "python3" => :optional
+  depends_on "python@2" => :recommended if MacOS.version <= :snow_leopard
+  depends_on "python" => :optional
 
   def install
     Language::Python.each_python(build) do |python, _version|

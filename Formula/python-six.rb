@@ -5,8 +5,8 @@ class PythonSix < Formula
   sha256 "105f8d68616f8248e24bf0e9372ef04d3cc10104f1980f54d57b2ce73a5ad56a"
   head "https://bitbucket.org/gutworth/six", :using => :hg
 
-  depends_on "python" => :recommended
-  depends_on "python3" => :optional
+  depends_on "python@2" => :recommended if MacOS.version <= :snow_leopard
+  depends_on "python" => :optional
 
   def install
     Language::Python.each_python(build) do |python, _version|
