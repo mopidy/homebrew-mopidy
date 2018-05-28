@@ -1,11 +1,9 @@
-Homebrew-Mopidy
-===============
+# Homebrew-Mopidy
 
 These formulae let you install Mopidy and Mopidy extensions with all
-required dependencies on OS X.
+required dependencies on macOS.
 
-How to install these formulae?
-------------------------------
+## How to install these formulae?
 
 1. Run `brew tap mopidy/mopidy` to get access to formulae in this repo.
 
@@ -19,32 +17,29 @@ How to install these formulae?
    repo.
 
    You can also install via URL: `brew install
-   https://raw.github.com/mopidy/homebrew-mopidy/master/<formula>.rb`
+   https://raw.github.com/mopidy/homebrew-mopidy/master/Formula/<formula>.rb`
 
-Troubleshooting
----------------
+## Troubleshooting
 
-See `brew help`, `man brew`, or the Homebrew
-[wiki](https://github.com/Homebrew/homebrew/wiki).
+See `brew help`, `man brew`, or the Homebrew [docs](https://docs.brew.sh).
 
-Adding a formula to this tap
-----------------------------
+## Adding a formula to this tap
 
 1. Fork this repository on GitHub.
 2. Clone to your Mac.
-3. Read [Homebrew and
-   Python](https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python) and
-   look at the other formulae here.
+3. Read [Python for Formula
+   Authors](https://docs.brew.sh/Python-for-Formula-Authors) and look at the
+   other formulae here.
 4. In your locally cloned `homebrew-mopidy` repo, create a new branch: `git
    checkout -b my-new-formula`
 5. Write/edit your formula (Ruby file). Check the [Homebrew
-   wiki](https://github.com/Homebrew/homebrew/wiki) for details.
+   docs](https://docs.brew.sh) for help.
 6. Test it locally! `brew install ./my-new-formula.rb`. Does it install? Note,
    how `./<formula>.rb` will target the local file.
 7. `git push origin my-new-formula` to get it into your GitHub as a
    new branch.
 8. If you have to change something, add a commit and `git push`.
-9. On GitHub, select your new branch and then click the "Pull Request" button.
+9. On GitHub, submit a pull request to get your branch merged into this repo.
 
 License
 -------
