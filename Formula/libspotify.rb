@@ -1,6 +1,6 @@
 class Libspotify < Formula
   desc "C interface to Spotify"
-  homepage "http://developer.spotify.com/en/libspotify/overview/"
+  homepage "https://mopidy.github.io/libspotify-archive/"
   url "https://mopidy.github.io/libspotify-archive/libspotify-12.1.51-Darwin-universal.zip"
   sha256 "80053f0779f6192a8052732904d88b91acc62a350831f6b585a3c6ac10cb8fbd"
 

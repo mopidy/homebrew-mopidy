@@ -1,6 +1,6 @@
 class PythonPykka < Formula
   desc "Python implementation of the actor model"
-  homepage "http://www.pykka.org/"
+  homepage "https://www.pykka.org/"
   url "https://files.pythonhosted.org/packages/source/P/Pykka/Pykka-1.2.1.tar.gz"
   sha256 "e847ffeadee49b563426ab803e8eee67264d773e38ca14763fdcda56411e3c11"
   head "https://github.com/jodal/pykka.git"
