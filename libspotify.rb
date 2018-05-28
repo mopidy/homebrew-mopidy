@@ -18,7 +18,7 @@ class Libspotify < Formula
     lib.install_symlink "libspotify.12.1.51.dylib" => "libspotify"
   end
 
-  def pc_file; <<-EOS.undent
+  def pc_file; <<~EOS
     prefix=#{opt_prefix}
     exec_prefix=${prefix}
     libdir=${exec_prefix}/lib
@@ -33,7 +33,7 @@ class Libspotify < Formula
   end
 
   test do
-    (testpath/"test.c").write <<-EOS.undent
+    (testpath/"test.c").write <<~EOS
       #include <string.h>
       #include <libspotify/api.h>
 
