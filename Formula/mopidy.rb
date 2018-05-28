@@ -45,16 +45,7 @@ class Mopidy < Formula
     system "python", *Language::Python.setup_install_args(prefix)
   end
 
-  test do
-    system "python", "-c", "import mopidy"
-  end
-
   plist_options :manual => "mopidy"
-
-  def plist_name
-    "homebrew.mopidy." + name
-  end
-
   def plist; <<~EOS
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -73,5 +64,13 @@ class Mopidy < Formula
     </dict>
     </plist>
     EOS
+  end
+
+  test do
+    system "python", "-c", "import mopidy"
+  end
+
+  def plist_name
+    "homebrew.mopidy." + name
   end
 end
