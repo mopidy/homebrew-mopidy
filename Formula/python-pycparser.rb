@@ -1,7 +1,7 @@
 class PythonPycparser < Formula
   desc "C parser in Python"
   homepage "https://github.com/eliben/pycparser"
-  url "https://pypi.python.org/packages/source/p/pycparser/pycparser-2.14.tar.gz"
+  url "https://files.pythonhosted.org/packages/source/p/pycparser/pycparser-2.14.tar.gz"
   sha256 "7959b4a74abdc27b312fed1c21e6caf9309ce0b29ea86b591fd2e99ecdf27f73"
   head "https://github.com/eliben/pycparser.git"
 
