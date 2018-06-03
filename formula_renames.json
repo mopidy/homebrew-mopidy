@@ -1,5 +1,3 @@
 {
-    "pykka": "python-pykka",
-    "pyspotify": "python-spotify",
-    "requests": "python-requests"
+    "pyspotify": "python-spotify"
 }

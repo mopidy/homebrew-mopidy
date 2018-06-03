@@ -7,8 +7,10 @@ class MopidySoundcloud < Formula
 
   depends_on "python@2" if MacOS.version <= :snow_leopard
   depends_on "mopidy/mopidy/mopidy"
-  depends_on "mopidy/mopidy/python-pykka"
-  depends_on "mopidy/mopidy/python-requests"
+
+  # Dependencies assumed bundled by mopidy:
+  # - pykka
+  # - requests
 
   def install
     system "python", *Language::Python.setup_install_args(prefix)
