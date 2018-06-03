@@ -1,4 +1,4 @@
-class PythonSpotify < Formula
+class Pyspotify < Formula
   desc "Python binding for libspotify"
   homepage "https://pyspotify.mopidy.com/"
   url "https://files.pythonhosted.org/packages/source/p/pyspotify/pyspotify-2.0.5.tar.gz"
@@ -32,7 +32,7 @@ class PythonSpotify < Formula
 
       site_packages = "lib/python#{version}/site-packages"
       pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
-      (prefix/site_packages/"homebrew-python-spotify.pth").write pth_contents
+      (prefix/site_packages/"homebrew-pyspotify.pth").write pth_contents
     end
   end
 
