@@ -10,18 +10,18 @@ class Mopidy < Formula
     "with-libogg",
     "with-libvorbis",
     "with-opus",
-    "with-theora"
+    "with-theora",
   ]
   depends_on "gst-plugins-good" => [
     "with-flac",
     "with-libshout",
     "with-speex",
-    "with-taglib"
+    "with-taglib",
   ]
   depends_on "gst-plugins-bad" => [
     "with-faad2",
     "with-libmms",
-    "with-opus"
+    "with-opus",
   ]
   depends_on "gst-plugins-ugly" => [
     "with-flac",
@@ -31,11 +31,11 @@ class Mopidy < Formula
     "with-mad",
     "with-libshout",
     "with-theora",
-    "with-two-lame"
+    "with-two-lame",
   ]
   depends_on "gst-python" => [
     "without-python",
-    "with-python@2"
+    "with-python@2",
   ]
 
   resource "backports_abc" do
