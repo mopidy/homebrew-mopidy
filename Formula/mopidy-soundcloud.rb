@@ -1,8 +1,8 @@
 class MopidySoundcloud < Formula
   desc "Mopidy extension for playing music from SoundCloud"
   homepage "https://github.com/mopidy/mopidy-soundcloud"
-  url "https://files.pythonhosted.org/packages/source/M/Mopidy-SoundCloud/Mopidy-SoundCloud-2.0.2.tar.gz"
-  sha256 "374bf7ab496623f787ad2905575fce52df437e953c876486e059d8cb9aecc509"
+  url "https://files.pythonhosted.org/packages/17/95/3e5ed70a97096ff03f398214a680bdddba3c60329799534de36834600602/Mopidy-SoundCloud-2.1.0.tar.gz"
+  sha256 "8859cae010429531ce780d39a60d74e345ac24ef409d3fcaeaf83079842a3ca2"
   head "https://github.com/mopidy/mopidy-soundcloud.git"
 
   depends_on "python@2" if MacOS.version <= :snow_leopard
