@@ -14,7 +14,11 @@ class MopidySpotify < Formula
   # - requests
 
   def install
-    system "python", *Language::Python.setup_install_args(prefix)
+    system "python", *Language::Python.setup_install_args(libexec)
+
+    site_packages = "lib/python2.7/site-packages"
+    pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
+    (prefix/site_packages/"homebrew-mopidy-spotify.pth").write pth_contents
   end
 
   test do
