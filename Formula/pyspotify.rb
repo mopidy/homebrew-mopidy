@@ -4,6 +4,7 @@ class Pyspotify < Formula
   url "https://files.pythonhosted.org/packages/source/p/pyspotify/pyspotify-2.0.5.tar.gz"
   sha256 "fbd41c58d62232b0cabb7a9e38d45f36ac221699c006899bdb6be74c04602678"
   head "https://github.com/mopidy/pyspotify.git", :branch => "v2.x/develop"
+  revision 1
 
   depends_on "python@2" => :recommended
   depends_on "python" => :recommended
