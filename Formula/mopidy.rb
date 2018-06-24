@@ -34,6 +34,7 @@ class Mopidy < Formula
     "with-theora",
     "with-two-lame",
   ]
+  depends_on "py2cairo"
   depends_on "gst-python" => [
     "without-python",
     "with-python@2",
