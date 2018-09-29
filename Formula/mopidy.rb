@@ -1,10 +1,9 @@
 class Mopidy < Formula
   desc "Extensible music server written in Python"
   homepage "https://www.mopidy.com/"
-  url "https://files.pythonhosted.org/packages/60/76/427ad1fbe879034e34cf9898310ba5a9cc42cd36b08898059be06066fa38/Mopidy-2.1.0.tar.gz"
-  sha256 "297369a34ebd584b2fe25a7184f68fe876a149256549b03b503a55ede3f13f6a"
+  url "https://files.pythonhosted.org/packages/07/d7/f76eb47d98e6b790672ec26a59e9c603f37630a8c2fceaf0f69f5c8f3974/Mopidy-2.2.0.tar.gz"
+  sha256 "577d5aece5769f222e5f8801217c6a958574fd8047527599c8ac8225fcf77258"
   head "https://github.com/mopidy/mopidy.git"
-  revision 1
 
   depends_on "python@2" if MacOS.version <= :snow_leopard
   depends_on "gst-plugins-base" => [
@@ -47,8 +46,8 @@ class Mopidy < Formula
 
   resource "certifi" do
     # Required by requests
-    url "https://files.pythonhosted.org/packages/4d/9c/46e950a6f4d6b4be571ddcae21e7bc846fcbb88f1de3eff0f6dd0a6be55d/certifi-2018.4.16.tar.gz"
-    sha256 "13e698f54293db9f89122b0581843a782ad0934a4fe0172d2a980ba77fc61bb7"
+    url "https://files.pythonhosted.org/packages/e1/0f/f8d5e939184547b3bdc6128551b831a62832713aa98c2ccdf8c47ecc7f17/certifi-2018.8.24.tar.gz"
+    sha256 "376690d6f16d32f9d1fe8932551d80b23e9d393a8578c5633a2ed39a64861638"
   end
 
   resource "chardet" do
@@ -65,8 +64,8 @@ class Mopidy < Formula
 
   resource "idna" do
     # Required by requests
-    url "https://files.pythonhosted.org/packages/f4/bd/0467d62790828c23c47fc1dfa1b1f052b24efdf5290f071c7a91d0d82fd3/idna-2.6.tar.gz"
-    sha256 "2c6a5de3089009e3da7c5dde64a141dbc8551d5b7f6cf4ed7c2568d0cc520a8f"
+    url "https://files.pythonhosted.org/packages/65/c4/80f97e9c9628f3cac9b98bfca0402ede54e0563b56482e3e6e45c43c4935/idna-2.7.tar.gz"
+    sha256 "684a38a6f903c1d71d6d5fac066b58d7768af4de2b832e426ec79c30daa94a16"
   end
 
   resource "Pykka" do
@@ -77,8 +76,8 @@ class Mopidy < Formula
 
   resource "requests" do
     # Required by Mopidy
-    url "https://files.pythonhosted.org/packages/b0/e1/eab4fc3752e3d240468a8c0b284607899d2fbfb236a56b7377a329aa8d09/requests-2.18.4.tar.gz"
-    sha256 "9c443e7324ba5b85070c4a818ade28bfabedf16ea10206da1132edaa6dda237e"
+    url "https://files.pythonhosted.org/packages/54/1f/782a5734931ddf2e1494e4cd615a51ff98e1879cbe9eecbdfeaf09aa75e9/requests-2.19.1.tar.gz"
+    sha256 "ec22d826a36ed72a7358ff3fe56cbd4ba69dd7a6718ffd450ff0e9df7a47ce6a"
   end
 
   resource "singledispatch" do
@@ -101,8 +100,8 @@ class Mopidy < Formula
 
   resource "urllib3" do
     # Required by requests
-    url "https://files.pythonhosted.org/packages/ee/11/7c59620aceedcc1ef65e156cc5ce5a24ef87be4107c2b74458464e437a5d/urllib3-1.22.tar.gz"
-    sha256 "cc44da8e1145637334317feebd728bd869a35285b93cbb4cca2577da7e62db4f"
+    url "https://files.pythonhosted.org/packages/3c/d2/dc5471622bd200db1cd9319e02e71bc655e9ea27b8e0ce65fc69de0dac15/urllib3-1.23.tar.gz"
+    sha256 "a68ac5e15e76e7e5dd2b8f94007233e01effe3e50e8daddf69acfd81cb686baf"
   end
 
   def install
