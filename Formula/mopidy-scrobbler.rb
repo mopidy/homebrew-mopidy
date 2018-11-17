@@ -12,7 +12,6 @@ class MopidyScrobbler < Formula
   # - pykka
 
   resource "pylast" do
-    # Required by tornado
     url "https://files.pythonhosted.org/packages/8a/1a/ece4ef4ebf51236ac25e9708fb3e1e70b6447e01262f8b156ccbda894fa9/pylast-2.2.0.tar.gz"
     sha256 "a21a10e559cbb80db5eb72e20a22740496a292977ed3568c937560b8d6885ab4"
   end
