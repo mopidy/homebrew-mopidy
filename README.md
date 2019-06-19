@@ -1,3 +1,21 @@
+# WARNING
+
+As of January 2019, the Homebrew project dropped support for options in core
+formulas. This tap depends on that feature to build some core formulas, such as
+GObject, with Python 2 support.
+
+**Thus, this tap does not work with recent Homebrew versions.**
+
+While we could work around this by copying some of the formulas we depend on
+into this tap and modifying them to fit our needs, we'd rather spend that time
+on porting Mopidy to Python 3 before Python 2.7 reaches end-of-life in January
+2020.
+
+Please see [issue #32](https://github.com/mopidy/homebrew-mopidy/issues/32) for
+details.
+
+---
+
 # Homebrew-Mopidy
 
 These formulae let you install Mopidy and Mopidy extensions with all
