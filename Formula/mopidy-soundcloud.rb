@@ -1,11 +1,11 @@
 class MopidySoundcloud < Formula
   desc "Mopidy extension for playing music from SoundCloud"
   homepage "https://github.com/mopidy/mopidy-soundcloud"
-  url "https://files.pythonhosted.org/packages/17/95/3e5ed70a97096ff03f398214a680bdddba3c60329799534de36834600602/Mopidy-SoundCloud-2.1.0.tar.gz"
-  sha256 "8859cae010429531ce780d39a60d74e345ac24ef409d3fcaeaf83079842a3ca2"
+  url "https://files.pythonhosted.org/packages/51/9b/9788ca4a2165ef279f18a1945691352be3649589a34066a9805dab39ac53/Mopidy-SoundCloud-3.0.0rc1.tar.gz"
+  sha256 "dfba154683f71ee1dce18fb7d3ace5a0cb3dea2121328b556fe80432b1283d9e"
   head "https://github.com/mopidy/mopidy-soundcloud.git"
 
-  depends_on "python@2" if MacOS.version <= :snow_leopard
+  depends_on "python"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -13,14 +13,15 @@ class MopidySoundcloud < Formula
   # - requests
 
   def install
-    system "python", *Language::Python.setup_install_args(libexec)
+    system "python3", *Language::Python.setup_install_args(libexec)
 
-    site_packages = "lib/python2.7/site-packages"
+    xy = Language::Python.major_minor_version "python3"
+    site_packages = "lib/python#{xy}/site-packages"
     pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
     (prefix/site_packages/"homebrew-mopidy-soundcloud.pth").write pth_contents
   end
 
   test do
-    system "python", "-c", "import mopidy_soundcloud"
+    system "python3", "-c", "import mopidy_soundcloud"
   end
 end
