@@ -1,45 +1,40 @@
 class Pyspotify < Formula
-  desc "Python binding for libspotify"
+  desc "Python wrapper for libspotify"
   homepage "https://pyspotify.mopidy.com/"
-  url "https://files.pythonhosted.org/packages/source/p/pyspotify/pyspotify-2.0.5.tar.gz"
-  sha256 "fbd41c58d62232b0cabb7a9e38d45f36ac221699c006899bdb6be74c04602678"
-  head "https://github.com/mopidy/pyspotify.git", :branch => "v2.x/develop"
-  revision 1
+  url "https://files.pythonhosted.org/packages/5c/6d/69c7c9876f322697e41d7439b1a7b494ccf073d3d78c20de068f563920dd/pyspotify-2.1.2.tar.gz"
+  sha256 "5f80d3ca9b0b5d8aefb40513e96d655fb4c9f0f6e94c147bd6bf15ab9759ade7"
+  head "https://github.com/mopidy/pyspotify.git", :branch => "v2.x/master"
 
-  depends_on "python@2" => :recommended
-  depends_on "python" => :recommended
+  depends_on "python"
   depends_on "libffi"
   depends_on "mopidy/mopidy/libspotify"
 
   resource "cffi" do
-    url "https://files.pythonhosted.org/packages/e7/a7/4cd50e57cc6f436f1cc3a7e8fa700ff9b8b4d471620629074913e3735fb2/cffi-1.11.5.tar.gz"
-    sha256 "e90f17980e6ab0f3c2f3730e56d1fe9bcba1891eeea58966e89d352492cc74f4"
+    url "https://files.pythonhosted.org/packages/2d/bf/960e5a422db3ac1a5e612cb35ca436c3fc985ed4b7ed13a1b4879006f450/cffi-1.13.2.tar.gz"
+    sha256 "599a1e8ff057ac530c9ad1778293c665cb81a791421f46922d80a86473c13346"
   end
 
   resource "pycparser" do
-    url "https://files.pythonhosted.org/packages/8c/2d/aad7f16146f4197a11f8e91fb81df177adcc2073d36a17b1491fd09df6ed/pycparser-2.18.tar.gz"
-    sha256 "99a8ca03e29851d96616ad0404b4aad7d9ee16f25c9f9708a11faf2810f7b226"
+    url "https://files.pythonhosted.org/packages/68/9e/49196946aee219aead1290e00d1e7fdeab8567783e83e1b9ab5585e6206a/pycparser-2.19.tar.gz"
+    sha256 "a988718abfad80b6b157acce7bf130a30876d27603738ac39f140993246b25b3"
   end
 
   def install
-    Language::Python.each_python(build) do |python, version|
-      %w[pycparser cffi].each do |r|
-        resource(r).stage do
-          system python, *Language::Python.setup_install_args(libexec)
-        end
+    resources.each do |r|
+      r.stage do
+        system "python3", *Language::Python.setup_install_args(libexec)
       end
-
-      system python, *Language::Python.setup_install_args(libexec)
-
-      site_packages = "lib/python#{version}/site-packages"
-      pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
-      (prefix/site_packages/"homebrew-pyspotify.pth").write pth_contents
     end
+
+    system "python3", *Language::Python.setup_install_args(libexec)
+
+    xy = Language::Python.major_minor_version "python3"
+    site_packages = "lib/python#{xy}/site-packages"
+    pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
+    (prefix/site_packages/"homebrew-pyspotify.pth").write pth_contents
   end
 
   test do
-    Language::Python.each_python(build) do |python, _version|
-      system python, "-c", "import spotify"
-    end
+    system "python3", "-c", "import spotify"
   end
 end
