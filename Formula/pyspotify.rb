@@ -1,9 +1,9 @@
 class Pyspotify < Formula
   desc "Python wrapper for libspotify"
-  homepage "https://pyspotify.mopidy.com/"
-  url "https://files.pythonhosted.org/packages/5c/6d/69c7c9876f322697e41d7439b1a7b494ccf073d3d78c20de068f563920dd/pyspotify-2.1.2.tar.gz"
-  sha256 "5f80d3ca9b0b5d8aefb40513e96d655fb4c9f0f6e94c147bd6bf15ab9759ade7"
-  head "https://github.com/mopidy/pyspotify.git", :branch => "v2.x/master"
+  homepage "https://pyspotify.readthedocs.io/"
+  url "https://files.pythonhosted.org/packages/fe/1d/83d088397d95eacf6281ae748886d024aab50efdea50aedf8f294fc53aa7/pyspotify-2.1.3.tar.gz"
+  sha256 "6ae31d8ccd7e1f138a80f08c766173b2ced12d196732f68aee4ae023b7a9ad2a"
+  head "https://github.com/mopidy/pyspotify.git"
 
   depends_on "python"
   depends_on "libffi"
