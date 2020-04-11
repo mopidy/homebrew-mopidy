@@ -4,8 +4,9 @@ class Mopidy < Formula
   url "https://files.pythonhosted.org/packages/b0/6f/eaadbe67c5b99215bfa247257fc20cb997674f5ecf3765230ae92d456a74/Mopidy-3.0.2.tar.gz"
   sha256 "60b6f48e53069ac280e8271e89f50161d8a3e0c9bee83ac4d862174b3e38cedb"
   head "https://github.com/mopidy/mopidy.git"
+  revision 1
 
-  depends_on "python"
+  depends_on "python@3.8"
   depends_on "gst-plugins-base"
   depends_on "gst-plugins-good"
   depends_on "gst-plugins-bad"
@@ -55,15 +56,17 @@ class Mopidy < Formula
   end
 
   def install
+    python3 = Formula["python@3.8"].opt_bin/"python3"
+
     resources.each do |r|
       r.stage do
-        system "python3", *Language::Python.setup_install_args(libexec)
+        system python3, *Language::Python.setup_install_args(libexec)
       end
     end
 
-    system "python3", *Language::Python.setup_install_args(libexec)
+    system python3, *Language::Python.setup_install_args(libexec)
 
-    xy = Language::Python.major_minor_version "python3"
+    xy = Language::Python.major_minor_version python3
     site_packages = "lib/python#{xy}/site-packages"
     pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
     (prefix/site_packages/"homebrew-mopidy.pth").write pth_contents
@@ -93,7 +96,8 @@ class Mopidy < Formula
   end
 
   test do
-    system "python3", "-c", "import mopidy"
+    python3 = Formula["python@3.8"].opt_bin/"python3"
+    system python3, "-c", "import mopidy"
   end
 
   def plist_name

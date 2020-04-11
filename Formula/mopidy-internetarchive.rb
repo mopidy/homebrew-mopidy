@@ -4,8 +4,9 @@ class MopidyInternetarchive < Formula
   url "https://files.pythonhosted.org/packages/e3/4a/159fd84d3f4d4ece603ebbb3f5e0ca0192084e9b5da5fcdab7eebb87e902/Mopidy-InternetArchive-3.0.0.tar.gz"
   sha256 "bbd1fbcddfa06caaa088a3bf3533d4a7aa8bc8f4e4b11019b4664cc8426e7363"
   head "https://github.com/tkem/mopidy-internetarchive.git"
+  revision 1
 
-  depends_on "python"
+  depends_on "python@3.8"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -23,21 +24,24 @@ class MopidyInternetarchive < Formula
   end
 
   def install
+    python3 = Formula["python@3.8"].opt_bin/"python3"
+
     resources.each do |r|
       r.stage do
-        system "python3", *Language::Python.setup_install_args(libexec)
+        system python3, *Language::Python.setup_install_args(libexec)
       end
     end
 
-    system "python3", *Language::Python.setup_install_args(libexec)
+    system python3, *Language::Python.setup_install_args(libexec)
 
-    xy = Language::Python.major_minor_version "python3"
+    xy = Language::Python.major_minor_version python3
     site_packages = "lib/python#{xy}/site-packages"
     pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
     (prefix/site_packages/"homebrew-mopidy-internetarchive.pth").write pth_contents
   end
 
   test do
-    system "python3", "-c", "import mopidy_internetarchive"
+    python3 = Formula["python@3.8"].opt_bin/"python3"
+    system python3, "-c", "import mopidy_internetarchive"
   end
 end

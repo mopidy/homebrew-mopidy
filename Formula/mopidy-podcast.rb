@@ -4,8 +4,9 @@ class MopidyPodcast < Formula
   url "https://files.pythonhosted.org/packages/2a/88/c40f0e727d20849ae67f247a4aa0dd5bcac7f76e27f613cbaf187f5c68bc/Mopidy-Podcast-3.0.0.tar.gz"
   sha256 "b9e360b817aa53d700909860f87ba58500ae76fe6c9e7a2e72ecb6ed87284bfc"
   head "https://github.com/tkem/mopidy-podcast.git"
+  revision 1
 
-  depends_on "python"
+  depends_on "python@3.8"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -23,21 +24,24 @@ class MopidyPodcast < Formula
   end
 
   def install
+    python3 = Formula["python@3.8"].opt_bin/"python3"
+
     resources.each do |r|
       r.stage do
-        system "python3", *Language::Python.setup_install_args(libexec)
+        system python3, *Language::Python.setup_install_args(libexec)
       end
     end
 
-    system "python3", *Language::Python.setup_install_args(libexec)
+    system python3, *Language::Python.setup_install_args(libexec)
 
-    xy = Language::Python.major_minor_version "python3"
+    xy = Language::Python.major_minor_version python3
     site_packages = "lib/python#{xy}/site-packages"
     pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
     (prefix/site_packages/"homebrew-mopidy-podcast.pth").write pth_contents
   end
 
   test do
-    system "python3", "-c", "import mopidy_podcast"
+    python3 = Formula["python@3.8"].opt_bin/"python3"
+    system python3, "-c", "import mopidy_podcast"
   end
 end

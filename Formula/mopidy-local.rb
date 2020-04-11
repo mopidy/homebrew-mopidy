@@ -4,8 +4,9 @@ class MopidyLocal < Formula
   url "https://files.pythonhosted.org/packages/03/a9/650dfbd029d38ff38b8bd1c8516ae91272a800f60d1289746cd070ba7b01/Mopidy-Local-3.1.1.tar.gz"
   sha256 "3205082a4543ecf38378b34e30344dc892bdb18ed73d93eab5f47a4ac28fa08e"
   head "https://github.com/mopidy/mopidy-local.git"
+  revision 1
 
-  depends_on "python"
+  depends_on "python@3.8"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -18,21 +19,24 @@ class MopidyLocal < Formula
   end
 
   def install
+    python3 = Formula["python@3.8"].opt_bin/"python3"
+
     resources.each do |r|
       r.stage do
-        system "python3", *Language::Python.setup_install_args(libexec)
+        system python3, *Language::Python.setup_install_args(libexec)
       end
     end
 
-    system "python3", *Language::Python.setup_install_args(libexec)
+    system python3, *Language::Python.setup_install_args(libexec)
 
-    xy = Language::Python.major_minor_version "python3"
+    xy = Language::Python.major_minor_version python3
     site_packages = "lib/python#{xy}/site-packages"
     pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
     (prefix/site_packages/"homebrew-mopidy-local.pth").write pth_contents
   end
 
   test do
-    system "python3", "-c", "import mopidy_local"
+    python3 = Formula["python@3.8"].opt_bin/"python3"
+    system python3, "-c", "import mopidy_local"
   end
 end

@@ -4,8 +4,9 @@ class Pyspotify < Formula
   url "https://files.pythonhosted.org/packages/fe/1d/83d088397d95eacf6281ae748886d024aab50efdea50aedf8f294fc53aa7/pyspotify-2.1.3.tar.gz"
   sha256 "6ae31d8ccd7e1f138a80f08c766173b2ced12d196732f68aee4ae023b7a9ad2a"
   head "https://github.com/mopidy/pyspotify.git"
+  revision 1
 
-  depends_on "python"
+  depends_on "python@3.8"
   depends_on "libffi"
   depends_on "mopidy/mopidy/libspotify"
 
@@ -20,21 +21,24 @@ class Pyspotify < Formula
   end
 
   def install
+    python3 = Formula["python@3.8"].opt_bin/"python3"
+
     resources.each do |r|
       r.stage do
-        system "python3", *Language::Python.setup_install_args(libexec)
+        system python3, *Language::Python.setup_install_args(libexec)
       end
     end
 
-    system "python3", *Language::Python.setup_install_args(libexec)
+    system python3, *Language::Python.setup_install_args(libexec)
 
-    xy = Language::Python.major_minor_version "python3"
+    xy = Language::Python.major_minor_version python3
     site_packages = "lib/python#{xy}/site-packages"
     pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
     (prefix/site_packages/"homebrew-pyspotify.pth").write pth_contents
   end
 
   test do
-    system "python3", "-c", "import spotify"
+    python3 = Formula["python@3.8"].opt_bin/"python3"
+    system python3, "-c", "import spotify"
   end
 end
