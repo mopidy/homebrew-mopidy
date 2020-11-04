@@ -4,9 +4,9 @@ class MopidyPodcastItunes < Formula
   url "https://files.pythonhosted.org/packages/95/95/cdd4c37233d5653ce65a3ae35e56196a8815c789a2c624c88d603bd11008/Mopidy-Podcast-iTunes-3.0.0.tar.gz"
   sha256 "11b0faf4d099336bb63afe7478ee1d387aeb2c6552a275b196c351a62e65b2e6"
   head "https://github.com/tkem/mopidy-podcast-itunes.git"
-  revision 1
+  revision 2
 
-  depends_on "python@3.8"
+  depends_on "python@3.9"
   depends_on "mopidy/mopidy/mopidy"
   depends_on "mopidy/mopidy/mopidy-podcast"
 
@@ -15,7 +15,7 @@ class MopidyPodcastItunes < Formula
   # - requests
 
   def install
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
     system python3, *Language::Python.setup_install_args(libexec)
 
     xy = Language::Python.major_minor_version python3
@@ -25,7 +25,7 @@ class MopidyPodcastItunes < Formula
   end
 
   test do
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
     system python3, "-c", "import mopidy_podcast_itunes"
   end
 end

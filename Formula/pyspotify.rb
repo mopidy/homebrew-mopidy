@@ -4,9 +4,9 @@ class Pyspotify < Formula
   url "https://files.pythonhosted.org/packages/fe/1d/83d088397d95eacf6281ae748886d024aab50efdea50aedf8f294fc53aa7/pyspotify-2.1.3.tar.gz"
   sha256 "6ae31d8ccd7e1f138a80f08c766173b2ced12d196732f68aee4ae023b7a9ad2a"
   head "https://github.com/mopidy/pyspotify.git"
-  revision 1
+  revision 2
 
-  depends_on "python@3.8"
+  depends_on "python@3.9"
   depends_on "libffi"
   depends_on "mopidy/mopidy/libspotify"
 
@@ -21,7 +21,7 @@ class Pyspotify < Formula
   end
 
   def install
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
 
     resources.each do |r|
       r.stage do
@@ -38,7 +38,7 @@ class Pyspotify < Formula
   end
 
   test do
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
     system python3, "-c", "import spotify"
   end
 end

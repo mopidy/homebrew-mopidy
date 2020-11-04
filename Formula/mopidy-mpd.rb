@@ -4,9 +4,9 @@ class MopidyMpd < Formula
   url "https://files.pythonhosted.org/packages/10/a1/af1f72d84b07fbc9353b5c4a37540b59ee5072fcc2f1791f81386046f1f9/Mopidy-MPD-3.0.0.tar.gz"
   sha256 "4c452e8ad8fbf13322b510cd48bc5bef5779d2ac8f39cd5e0ca2883248a4325f"
   head "https://github.com/mopidy/mopidy-mpd.git"
-  revision 1
+  revision 2
 
-  depends_on "python@3.8"
+  depends_on "python@3.9"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -14,7 +14,7 @@ class MopidyMpd < Formula
   # - requests
 
   def install
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
 
     resources.each do |r|
       r.stage do
@@ -31,7 +31,7 @@ class MopidyMpd < Formula
   end
 
   test do
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
     system python3, "-c", "import mopidy_mpd"
   end
 end

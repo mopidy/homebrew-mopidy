@@ -4,9 +4,9 @@ class MopidyInternetarchive < Formula
   url "https://files.pythonhosted.org/packages/e3/4a/159fd84d3f4d4ece603ebbb3f5e0ca0192084e9b5da5fcdab7eebb87e902/Mopidy-InternetArchive-3.0.0.tar.gz"
   sha256 "bbd1fbcddfa06caaa088a3bf3533d4a7aa8bc8f4e4b11019b4664cc8426e7363"
   head "https://github.com/tkem/mopidy-internetarchive.git"
-  revision 1
+  revision 2
 
-  depends_on "python@3.8"
+  depends_on "python@3.9"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -24,7 +24,7 @@ class MopidyInternetarchive < Formula
   end
 
   def install
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
 
     resources.each do |r|
       r.stage do
@@ -41,7 +41,7 @@ class MopidyInternetarchive < Formula
   end
 
   test do
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
     system python3, "-c", "import mopidy_internetarchive"
   end
 end
