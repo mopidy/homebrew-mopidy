@@ -4,9 +4,9 @@ class MopidyLocal < Formula
   url "https://files.pythonhosted.org/packages/03/a9/650dfbd029d38ff38b8bd1c8516ae91272a800f60d1289746cd070ba7b01/Mopidy-Local-3.1.1.tar.gz"
   sha256 "3205082a4543ecf38378b34e30344dc892bdb18ed73d93eab5f47a4ac28fa08e"
   head "https://github.com/mopidy/mopidy-local.git"
-  revision 1
+  revision 2
 
-  depends_on "python@3.8"
+  depends_on "python@3.9"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -19,7 +19,7 @@ class MopidyLocal < Formula
   end
 
   def install
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
 
     resources.each do |r|
       r.stage do
@@ -36,7 +36,7 @@ class MopidyLocal < Formula
   end
 
   test do
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
     system python3, "-c", "import mopidy_local"
   end
 end

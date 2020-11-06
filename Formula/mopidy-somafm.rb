@@ -4,9 +4,9 @@ class MopidySomafm < Formula
   url "https://files.pythonhosted.org/packages/f3/07/a29f0fa2f26d9948ea449f1a415cd459b47d48adfdef176fd99553cf81ac/Mopidy-SomaFM-2.0.0.tar.gz"
   sha256 "c3d1ae99867e09041f1d6565b218a5792f8438ee6196b1ecc610691f69ce08c9"
   head "https://github.com/AlexandrePTJ/mopidy-somafm.git"
-  revision 1
+  revision 2
 
-  depends_on "python@3.8"
+  depends_on "python@3.9"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -14,7 +14,7 @@ class MopidySomafm < Formula
   # - requests
 
   def install
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
 
     system python3, *Language::Python.setup_install_args(libexec)
 
@@ -25,7 +25,7 @@ class MopidySomafm < Formula
   end
 
   test do
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
     system python3, "-c", "import mopidy_somafm"
   end
 end

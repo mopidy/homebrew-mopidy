@@ -4,9 +4,9 @@ class MopidySpotify < Formula
   url "https://files.pythonhosted.org/packages/f2/d2/0ce7f0f948fa91175bc34b23be9c4c70323d121acb4cc089bd72fc2769df/Mopidy-Spotify-4.0.1.tar.gz"
   sha256 "ab437903b9fee931864d62ba03af5d2517dd844f4c8476e1ba26b280daf40508"
   head "https://github.com/mopidy/mopidy-spotify.git"
-  revision 1
+  revision 2
 
-  depends_on "python@3.8"
+  depends_on "python@3.9"
   depends_on "mopidy/mopidy/mopidy"
   depends_on "mopidy/mopidy/pyspotify"
 
@@ -15,7 +15,7 @@ class MopidySpotify < Formula
   # - requests
 
   def install
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
 
     system python3, *Language::Python.setup_install_args(libexec)
 
@@ -26,7 +26,7 @@ class MopidySpotify < Formula
   end
 
   test do
-    python3 = Formula["python@3.8"].opt_bin/"python3"
+    python3 = Formula["python@3.9"].opt_bin/"python3"
     system python3, "-c", "import mopidy_spotify"
   end
 end
