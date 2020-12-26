@@ -1,10 +1,9 @@
 class MopidyLocal < Formula
   desc "Mopidy extension for playing music from your music archive"
   homepage "https://github.com/mopidy/mopidy-local"
-  url "https://files.pythonhosted.org/packages/03/a9/650dfbd029d38ff38b8bd1c8516ae91272a800f60d1289746cd070ba7b01/Mopidy-Local-3.1.1.tar.gz"
-  sha256 "3205082a4543ecf38378b34e30344dc892bdb18ed73d93eab5f47a4ac28fa08e"
+  url "https://files.pythonhosted.org/packages/d6/2d/e2a19a920d82355723a4bfa2eb3db45f64b2f6080c6b083cf611c35049b0/Mopidy-Local-3.2.0.tar.gz"
+  sha256 "a06338b3afbb5ae8694cb4f8ccd9ffa900d8cec114b33e5e1be84d3e9646c791"
   head "https://github.com/mopidy/mopidy-local.git"
-  revision 2
 
   depends_on "python@3.9"
   depends_on "mopidy/mopidy/mopidy"
