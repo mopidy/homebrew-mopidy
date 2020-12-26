@@ -1,10 +1,9 @@
 class MopidyScrobbler < Formula
   desc "Mopidy extension for scrobbling played tracks to Last.fm"
   homepage "https://github.com/mopidy/mopidy-scrobbler"
-  url "https://files.pythonhosted.org/packages/78/30/8ca1603b687a37b3773f574c5a419d7eea659d52f4018a93c46471998da1/Mopidy-Scrobbler-2.0.0.tar.gz"
-  sha256 "2411e92303cd5950f5a24ef476638bffc066b43f79e7422b3727b7e120e91d69"
+  url "https://files.pythonhosted.org/packages/4b/2b/f5e71a37ca6698e4f287384482601b869d48fefeed8823b5db87a358bcfc/Mopidy-Scrobbler-2.0.1.tar.gz"
+  sha256 "001920edc5433678091cb74c56e39c57ffcdb280396447b07d6fbe4eba7a7d87"
   head "https://github.com/mopidy/mopidy-scrobbler.git"
-  revision 2
 
   depends_on "python@3.9"
   depends_on "mopidy/mopidy/mopidy"
