@@ -1,10 +1,9 @@
 class MopidyMpd < Formula
   desc "Mopidy extension for controlling Mopidy from MPD clients"
   homepage "https://github.com/mopidy/mopidy-mpd"
-  url "https://files.pythonhosted.org/packages/10/a1/af1f72d84b07fbc9353b5c4a37540b59ee5072fcc2f1791f81386046f1f9/Mopidy-MPD-3.0.0.tar.gz"
-  sha256 "4c452e8ad8fbf13322b510cd48bc5bef5779d2ac8f39cd5e0ca2883248a4325f"
+  url "https://files.pythonhosted.org/packages/32/ee/6f70528199d1ea7d5dff3b2e21fc1ac42e762797f4ba334c77c6f5e9fd18/Mopidy-MPD-3.1.0.tar.gz"
+  sha256 "d34011dad9a053c149a408c25b0ff552406513063bc9cdaab2bde30e71f81228"
   head "https://github.com/mopidy/mopidy-mpd.git"
-  revision 2
 
   depends_on "python@3.9"
   depends_on "mopidy/mopidy/mopidy"
