@@ -1,10 +1,9 @@
 class MopidyBeets < Formula
   desc "Mopidy extension for playing music from Beets with its web plugin"
   homepage "https://github.com/mopidy/mopidy-beets"
-  url "https://files.pythonhosted.org/packages/0e/59/72ac45e8a6b37a81d89df24052275c6a313bdcdde23eb7b6ce130433854d/Mopidy-Beets-4.0.0.tar.gz"
-  sha256 "c7455617e3f96c893181aec41b54d4b5a54daf1514ea6d2313abb69bfb78e186"
+  url "https://files.pythonhosted.org/packages/43/76/26231228ba3eb99875d94c3eddcc519c32f62ed39acaeec5fb8df4211997/Mopidy-Beets-4.0.1.tar.gz"
+  sha256 "6a3310f12da35bd737763ffbe7bab2301ad8340d74470d222817d2c39ba2a0d1"
   head "https://github.com/mopidy/mopidy-beets.git"
-  revision 2
 
   depends_on "python@3.9"
   depends_on "mopidy/mopidy/mopidy"
