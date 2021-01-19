@@ -1,8 +1,8 @@
 class MopidyTunein < Formula
   desc "Mopidy extension for playing music from TuneIn"
   homepage "https://github.com/kingosticks/mopidy-tunein"
-  url "https://files.pythonhosted.org/packages/dc/8a/1eabe4403f411a7f372cf013809177f2211be62a8cfc613d8eb1060b3e31/Mopidy-TuneIn-1.0.2.tar.gz"
-  sha256 "6c5222276882d435e5dd245cea27e66eb66ad6b03e1994a62f03458ed4846ed7"
+  url "https://files.pythonhosted.org/packages/22/c4/7efb36a75643a249528f191d1a9a130d9d62e4907aa35f4f9853e1fe1dd2/Mopidy-TuneIn-1.1.0.tar.gz"
+  sha256 "910a96552d239bfaee6ef3635cf9018f7ef733ac311cd0b11f27334dbd56c107"
   head "https://github.com/kingosticks/mopidy-tunein.git"
 
   depends_on "python@3.9"
