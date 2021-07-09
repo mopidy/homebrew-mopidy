@@ -1,8 +1,8 @@
 class Mopidy < Formula
   desc "Extensible music server written in Python"
   homepage "https://mopidy.com/"
-  url "https://files.pythonhosted.org/packages/2d/86/e884e3ba426930e7fd4afd56b392cb28deeb79d2ee699bb4ac518140ec08/Mopidy-3.1.1.tar.gz"
-  sha256 "a2d615010cd561bd7c5acf15a7787cf59cbb2856dc99d7ab91a54bbe3fcaebb2"
+  url "https://files.pythonhosted.org/packages/9f/a0/34c7735c1dfa60fb63ab22e5bd7afeef31e29bd61245a7497fc63d9233ae/Mopidy-3.2.0.tar.gz"
+  sha256 "8e9d1aa91a3c40ac43945be58249a7ce27eb955bce9c9e4d07592e809ac37004"
   head "https://github.com/mopidy/mopidy.git"
 
   depends_on "python@3.9"
