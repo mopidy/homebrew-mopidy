@@ -7,7 +7,6 @@ class MopidySpotify < Formula
 
   depends_on "python@3.9"
   depends_on "mopidy/mopidy/mopidy"
-  depends_on "mopidy/mopidy/pyspotify"
 
   # Dependencies assumed bundled by mopidy:
   # - pykka
