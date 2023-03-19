@@ -1,10 +1,9 @@
 class MopidyPodcastItunes < Formula
   desc "Mopidy extension for searching and browsing podcasts on the Apple iTunes Store"
   homepage "https://github.com/tkem/mopidy-podcast-itunes"
-  url "https://files.pythonhosted.org/packages/95/95/cdd4c37233d5653ce65a3ae35e56196a8815c789a2c624c88d603bd11008/Mopidy-Podcast-iTunes-3.0.0.tar.gz"
-  sha256 "11b0faf4d099336bb63afe7478ee1d387aeb2c6552a275b196c351a62e65b2e6"
+  url "https://files.pythonhosted.org/packages/da/37/c056afd9471c0d32ee116ed1f0977c6bc45a1bee2bd5b47e339f198118be/Mopidy-Podcast-iTunes-3.0.1.tar.gz"
+  sha256 "b31a30447506894afb74aa0d2ace21b4525c704681aafcafcc8366ad921921db"
   head "https://github.com/tkem/mopidy-podcast-itunes.git"
-  revision 2
 
   depends_on "python@3.11"
   depends_on "mopidy/mopidy/mopidy"
