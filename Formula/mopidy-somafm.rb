@@ -1,10 +1,9 @@
 class MopidySomafm < Formula
   desc "Mopidy extension for playing music from SomaFM"
   homepage "https://github.com/AlexandrePTJ/mopidy-somafm"
-  url "https://files.pythonhosted.org/packages/69/96/c3209d56b31def06abe642b9360c3143d9f94721b834790aa2f97b33ced3/Mopidy-SomaFM-2.0.1.tar.gz"
-  sha256 "2952e00d8a22e05bbfc2e15d4719b9b18bca2b9880ff72590c122c6690e894bf"
+  url "https://files.pythonhosted.org/packages/0e/6a/4cc6c5d1c813ec98343f24be7df3318acf118d2920ceeea6b6d31da1f1f0/Mopidy-SomaFM-2.0.2.tar.gz"
+  sha256 "0c2d1e9b192859f8c61e28760bc9c8341141c9fe76d577fedcab38251c4d3cb3"
   head "https://github.com/AlexandrePTJ/mopidy-somafm.git"
-  revision 2
 
   depends_on "python@3.11"
   depends_on "mopidy/mopidy/mopidy"
