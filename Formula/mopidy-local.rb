@@ -1,8 +1,8 @@
 class MopidyLocal < Formula
   desc "Mopidy extension for playing music from your music archive"
   homepage "https://github.com/mopidy/mopidy-local"
-  url "https://files.pythonhosted.org/packages/d6/2d/e2a19a920d82355723a4bfa2eb3db45f64b2f6080c6b083cf611c35049b0/Mopidy-Local-3.2.0.tar.gz"
-  sha256 "a06338b3afbb5ae8694cb4f8ccd9ffa900d8cec114b33e5e1be84d3e9646c791"
+  url "https://files.pythonhosted.org/packages/06/c3/5426543db3a53285ab1e45ad5e3ca261a41db20838ce68038c4ee0f7d41d/Mopidy-Local-3.2.1.tar.gz"
+  sha256 "29165157134fe869228da675e4d0083888368a29dc7dd3203fe1a27d7b4d83a3"
   head "https://github.com/mopidy/mopidy-local.git"
 
   depends_on "python@3.11"
@@ -13,8 +13,8 @@ class MopidyLocal < Formula
   # - requests
 
   resource "uritools" do
-    url "https://files.pythonhosted.org/packages/0e/16/f6c423dfe3e4a0e3bc00f4f2f540f3618a918b9b4fd0ec4ef51407931592/uritools-3.0.0.tar.gz"
-    sha256 "405917a31ce58a57c8ccd0e4ea290f38baf2f4823819c3688f5331f1aee4ccb0"
+    url "https://files.pythonhosted.org/packages/4d/8b/f49813253c29c49a3767256cbe94a2450d3377953fedcd8e62be200c0ba0/uritools-4.0.1.tar.gz"
+    sha256 "efc5c3a6de05404850685a8d3f34da8476b56aa3516fbf8eff5c8704c7a2826f"
   end
 
   def install
