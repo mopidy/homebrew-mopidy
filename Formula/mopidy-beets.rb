@@ -4,6 +4,7 @@ class MopidyBeets < Formula
   url "https://files.pythonhosted.org/packages/43/76/26231228ba3eb99875d94c3eddcc519c32f62ed39acaeec5fb8df4211997/Mopidy-Beets-4.0.1.tar.gz"
   sha256 "6a3310f12da35bd737763ffbe7bab2301ad8340d74470d222817d2c39ba2a0d1"
   head "https://github.com/mopidy/mopidy-beets.git"
+  revision 1
 
   depends_on "python@3.11"
   depends_on "mopidy/mopidy/mopidy"
