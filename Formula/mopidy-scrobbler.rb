@@ -5,7 +5,7 @@ class MopidyScrobbler < Formula
   sha256 "001920edc5433678091cb74c56e39c57ffcdb280396447b07d6fbe4eba7a7d87"
   head "https://github.com/mopidy/mopidy-scrobbler.git"
 
-  depends_on "python@3.9"
+  depends_on "python@3.11"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -17,7 +17,7 @@ class MopidyScrobbler < Formula
   end
 
   def install
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
 
     resources.each do |r|
       r.stage do
@@ -34,7 +34,7 @@ class MopidyScrobbler < Formula
   end
 
   test do
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
     system python3, "-c", "import mopidy_scrobbler"
   end
 end

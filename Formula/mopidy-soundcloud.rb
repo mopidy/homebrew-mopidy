@@ -5,7 +5,7 @@ class MopidySoundcloud < Formula
   sha256 "dd50f42c1519ec684c803a6406f3f689e1079c965dc8c8bcd132844f44ac65d7"
   head "https://github.com/mopidy/mopidy-soundcloud.git"
 
-  depends_on "python@3.9"
+  depends_on "python@3.11"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -13,7 +13,7 @@ class MopidySoundcloud < Formula
   # - requests
 
   def install
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
 
     system python3, *Language::Python.setup_install_args(libexec)
 
@@ -24,7 +24,7 @@ class MopidySoundcloud < Formula
   end
 
   test do
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
     system python3, "-c", "import mopidy_soundcloud"
   end
 end

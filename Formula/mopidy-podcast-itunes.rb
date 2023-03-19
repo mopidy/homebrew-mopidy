@@ -6,7 +6,7 @@ class MopidyPodcastItunes < Formula
   head "https://github.com/tkem/mopidy-podcast-itunes.git"
   revision 2
 
-  depends_on "python@3.9"
+  depends_on "python@3.11"
   depends_on "mopidy/mopidy/mopidy"
   depends_on "mopidy/mopidy/mopidy-podcast"
 
@@ -15,7 +15,7 @@ class MopidyPodcastItunes < Formula
   # - requests
 
   def install
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
     system python3, *Language::Python.setup_install_args(libexec)
 
     xy = Language::Python.major_minor_version python3
@@ -25,7 +25,7 @@ class MopidyPodcastItunes < Formula
   end
 
   test do
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
     system python3, "-c", "import mopidy_podcast_itunes"
   end
 end

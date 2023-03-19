@@ -5,7 +5,7 @@ class MopidyBeets < Formula
   sha256 "6a3310f12da35bd737763ffbe7bab2301ad8340d74470d222817d2c39ba2a0d1"
   head "https://github.com/mopidy/mopidy-beets.git"
 
-  depends_on "python@3.9"
+  depends_on "python@3.11"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -13,7 +13,7 @@ class MopidyBeets < Formula
   # - requests
 
   def install
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
     system python3, *Language::Python.setup_install_args(libexec)
 
     xy = Language::Python.major_minor_version python3
@@ -23,7 +23,7 @@ class MopidyBeets < Formula
   end
 
   test do
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
     system python3, "-c", "import mopidy_beets"
   end
 end

@@ -5,7 +5,7 @@ class MopidyMpd < Formula
   sha256 "d34011dad9a053c149a408c25b0ff552406513063bc9cdaab2bde30e71f81228"
   head "https://github.com/mopidy/mopidy-mpd.git"
 
-  depends_on "python@3.9"
+  depends_on "python@3.11"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -13,7 +13,7 @@ class MopidyMpd < Formula
   # - requests
 
   def install
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
 
     resources.each do |r|
       r.stage do
@@ -30,7 +30,7 @@ class MopidyMpd < Formula
   end
 
   test do
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
     system python3, "-c", "import mopidy_mpd"
   end
 end

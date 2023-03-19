@@ -5,7 +5,7 @@ class MopidySpotify < Formula
   sha256 "9a41fc970a9b66be0c757f3817f013a7af00e4b0ef795c90343003fd86a5126f"
   head "https://github.com/mopidy/mopidy-spotify.git"
 
-  depends_on "python@3.9"
+  depends_on "python@3.11"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -13,7 +13,7 @@ class MopidySpotify < Formula
   # - requests
 
   def install
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
 
     system python3, *Language::Python.setup_install_args(libexec)
 
@@ -24,7 +24,7 @@ class MopidySpotify < Formula
   end
 
   test do
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
     system python3, "-c", "import mopidy_spotify"
   end
 end

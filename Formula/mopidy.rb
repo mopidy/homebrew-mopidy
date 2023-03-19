@@ -5,7 +5,7 @@ class Mopidy < Formula
   sha256 "8e9d1aa91a3c40ac43945be58249a7ce27eb955bce9c9e4d07592e809ac37004"
   head "https://github.com/mopidy/mopidy.git"
 
-  depends_on "python@3.9"
+  depends_on "python@3.11"
   depends_on "gst-plugins-base"
   depends_on "gst-plugins-good"
   depends_on "gst-plugins-bad"
@@ -55,7 +55,7 @@ class Mopidy < Formula
   end
 
   def install
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
 
     resources.each do |r|
       r.stage do
@@ -95,7 +95,7 @@ class Mopidy < Formula
   end
 
   test do
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
     system python3, "-c", "import mopidy"
   end
 

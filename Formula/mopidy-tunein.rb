@@ -5,7 +5,7 @@ class MopidyTunein < Formula
   sha256 "910a96552d239bfaee6ef3635cf9018f7ef733ac311cd0b11f27334dbd56c107"
   head "https://github.com/kingosticks/mopidy-tunein.git"
 
-  depends_on "python@3.9"
+  depends_on "python@3.11"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -13,7 +13,7 @@ class MopidyTunein < Formula
   # - requests
 
   def install
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
 
     system python3, *Language::Python.setup_install_args(libexec)
 
@@ -24,7 +24,7 @@ class MopidyTunein < Formula
   end
 
   test do
-    python3 = Formula["python@3.9"].opt_bin/"python3"
+    python3 = Formula["python@3.11"].opt_bin/"python3.11"
     system python3, "-c", "import mopidy_tunein"
   end
 end
