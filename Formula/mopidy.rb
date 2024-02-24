@@ -4,8 +4,9 @@ class Mopidy < Formula
   url "https://files.pythonhosted.org/packages/c1/43/b450251b22c3b620a0f12bf7cb60db2ae160c5c535ce5dbe09c8ac35e1e3/Mopidy-3.4.1.tar.gz"
   sha256 "5c047be65738924e0349357dc46cb159b7cfbe7ed8dd2c9f3ee750e30c7a459a"
   head "https://github.com/mopidy/mopidy.git"
+  revision 1
 
-  depends_on "python@3.11"
+  depends_on "python@3.12"
   depends_on "gst-plugins-base"
   depends_on "gst-plugins-good"
   depends_on "gst-plugins-bad"
@@ -48,7 +49,7 @@ class Mopidy < Formula
   end
 
   def install
-    python3 = Formula["python@3.11"].opt_bin/"python3.11"
+    python3 = Formula["python@3.12"].opt_bin/"python3.12"
 
     resources.each do |r|
       r.stage do
@@ -72,7 +73,7 @@ class Mopidy < Formula
   end
 
   test do
-    python3 = Formula["python@3.11"].opt_bin/"python3.11"
+    python3 = Formula["python@3.12"].opt_bin/"python3.12"
     system python3, "-c", "import mopidy"
   end
 end
