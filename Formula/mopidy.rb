@@ -1,25 +1,21 @@
 class Mopidy < Formula
   desc "Extensible music server written in Python"
   homepage "https://mopidy.com/"
-  url "https://files.pythonhosted.org/packages/c1/43/b450251b22c3b620a0f12bf7cb60db2ae160c5c535ce5dbe09c8ac35e1e3/Mopidy-3.4.1.tar.gz"
-  sha256 "5c047be65738924e0349357dc46cb159b7cfbe7ed8dd2c9f3ee750e30c7a459a"
+  url "https://files.pythonhosted.org/packages/cc/41/1f291572997c49fce9eef47cea6d06b7d30e9923cc75a84679767f7fc99e/Mopidy-3.4.2.tar.gz"
+  sha256 "ada9ecbfc09eecc8c9e6742a8a4fea1632a134a1ab060527d8aa3d36df0547b6"
   head "https://github.com/mopidy/mopidy.git"
 
-  depends_on "python@3.11"
-  depends_on "gst-plugins-base"
-  depends_on "gst-plugins-good"
-  depends_on "gst-plugins-bad"
-  depends_on "gst-plugins-ugly"
-  depends_on "gst-python"
+  depends_on "python@3.12"
+  depends_on "gstreamer"
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
-    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
+    url "https://files.pythonhosted.org/packages/71/da/e94e26401b62acd6d91df2b52954aceb7f561743aa5ccc32152886c76c96/certifi-2024.2.2.tar.gz"
+    sha256 "0569859f95fc761b18b45ef421b1290a0f65f147e92a1e5eb3e635f9a5e4e66f"
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/ff/d7/8d757f8bd45be079d76309248845a04f09619a7b17d6dfc8c9ff6433cac2/charset-normalizer-3.1.0.tar.gz"
-    sha256 "34e0a2f9c370eb95597aae63bf85eb5e96826d81e3dcf88b8886012906f509b5"
+    url "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz"
+    sha256 "f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5"
   end
 
   resource "idna" do
@@ -33,22 +29,22 @@ class Mopidy < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/ee/391076f5937f0a8cdf5e53b701ffc91753e87b07d66bae4a09aa671897bf/requests-2.28.2.tar.gz"
-    sha256 "98b1b2782e3c6c4904938b84c0eb932721069dfdb9134313beff7c83c2df24bf"
+    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
+    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
   end
 
   resource "tornado" do
-    url "https://files.pythonhosted.org/packages/f3/9e/225a41452f2d9418d89be5e32cf824c84fe1e639d350d6e8d49db5b7f73a/tornado-6.2.tar.gz"
-    sha256 "9b630419bde84ec666bfd7ea0a4cb2a8a651c2d5cccdbdd1972a0c859dfc3c13"
+    url "https://files.pythonhosted.org/packages/bd/a2/ea124343e3b8dd7712561fe56c4f92eda26865f5e1040b289203729186f2/tornado-6.4.tar.gz"
+    sha256 "72291fa6e6bc84e626589f1c29d90a5a6d593ef5ae68052ee2ef000dfd273dee"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/21/79/6372d8c0d0641b4072889f3ff84f279b738cd8595b64c8e0496d4e848122/urllib3-1.26.15.tar.gz"
-    sha256 "8a388717b9476f934a21484e8c8e61875ab60644d29b9b39e11e4b9dc1c6b305"
+    url "https://files.pythonhosted.org/packages/0c/39/64487bf07df2ed854cc06078c27c0d0abc59bd27b32232876e403c333a08/urllib3-1.26.18.tar.gz"
+    sha256 "f8ecc1bba5667413457c529ab955bf8c67b45db799d159066261719e328580a0"
   end
 
   def install
-    python3 = Formula["python@3.11"].opt_bin/"python3.11"
+    python3 = Formula["python@3.12"].opt_bin/"python3.12"
 
     resources.each do |r|
       r.stage do
@@ -72,7 +68,7 @@ class Mopidy < Formula
   end
 
   test do
-    python3 = Formula["python@3.11"].opt_bin/"python3.11"
+    python3 = Formula["python@3.12"].opt_bin/"python3.12"
     system python3, "-c", "import mopidy"
   end
 end

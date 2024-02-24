@@ -4,8 +4,9 @@ class MopidyPodcast < Formula
   url "https://files.pythonhosted.org/packages/66/0e/84b848db511b8bbd1a3b7b32fb36656956e98a4069b3b41249db93b7f548/Mopidy-Podcast-3.0.1.tar.gz"
   sha256 "82b34f54454cd8f9696210577bab1a6c58d6541f7eabe6a92118dc1d4c47e760"
   head "https://github.com/tkem/mopidy-podcast.git"
+  revision 1
 
-  depends_on "python@3.11"
+  depends_on "python@3.12"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -23,7 +24,7 @@ class MopidyPodcast < Formula
   end
 
   def install
-    python3 = Formula["python@3.11"].opt_bin/"python3.11"
+    python3 = Formula["python@3.12"].opt_bin/"python3.12"
 
     resources.each do |r|
       r.stage do
@@ -40,7 +41,7 @@ class MopidyPodcast < Formula
   end
 
   test do
-    python3 = Formula["python@3.11"].opt_bin/"python3.11"
+    python3 = Formula["python@3.12"].opt_bin/"python3.12"
     system python3, "-c", "import mopidy_podcast"
   end
 end

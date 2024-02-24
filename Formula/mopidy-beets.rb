@@ -4,9 +4,9 @@ class MopidyBeets < Formula
   url "https://files.pythonhosted.org/packages/43/76/26231228ba3eb99875d94c3eddcc519c32f62ed39acaeec5fb8df4211997/Mopidy-Beets-4.0.1.tar.gz"
   sha256 "6a3310f12da35bd737763ffbe7bab2301ad8340d74470d222817d2c39ba2a0d1"
   head "https://github.com/mopidy/mopidy-beets.git"
-  revision 1
+  revision 2
 
-  depends_on "python@3.11"
+  depends_on "python@3.12"
   depends_on "mopidy/mopidy/mopidy"
 
   # Dependencies assumed bundled by mopidy:
@@ -14,7 +14,7 @@ class MopidyBeets < Formula
   # - requests
 
   def install
-    python3 = Formula["python@3.11"].opt_bin/"python3.11"
+    python3 = Formula["python@3.12"].opt_bin/"python3.12"
     system python3, *Language::Python.setup_install_args(libexec)
 
     xy = Language::Python.major_minor_version python3
@@ -24,7 +24,7 @@ class MopidyBeets < Formula
   end
 
   test do
-    python3 = Formula["python@3.11"].opt_bin/"python3.11"
+    python3 = Formula["python@3.12"].opt_bin/"python3.12"
     system python3, "-c", "import mopidy_beets"
   end
 end
