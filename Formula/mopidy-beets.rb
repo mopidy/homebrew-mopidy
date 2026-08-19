@@ -7,6 +7,11 @@ class MopidyBeets < Formula
   sha256 "086a5a3904324e881b71611b8d8e5e564b668bb6ee31513df3a755b740fe7d04"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-beets-5.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "c11d75f4c1b91d5562c0e3245c97fab47a07de2ee736c37adc034519eebd9145"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
