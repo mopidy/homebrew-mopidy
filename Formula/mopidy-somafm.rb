@@ -7,6 +7,11 @@ class MopidySomafm < Formula
   sha256 "77bcabde36d9dbc4a3e48d3a8b7e31bf166d5e7ca75b97faf887a6e6543a119e"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-somafm-2.1.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "4915179deebfe24a500d1d9c3c338b078a650b875394e335a2abfaf14998787c"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
