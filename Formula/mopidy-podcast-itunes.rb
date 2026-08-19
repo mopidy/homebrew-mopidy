@@ -7,6 +7,11 @@ class MopidyPodcastItunes < Formula
   sha256 "9e3ed0c9fc265e3e9b3c65fa90899d4cc3d88248619c13802467fac6392749d5"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-podcast-itunes-4.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "55cdb0797795d29643b4297e29f979d74821f6c821785e57f4b8663dafe20aa3"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   depends_on "mopidy/mopidy/mopidy-podcast"
   # The Python version must match the mopidy formula's.
