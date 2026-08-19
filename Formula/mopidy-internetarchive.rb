@@ -7,6 +7,11 @@ class MopidyInternetarchive < Formula
   sha256 "9d0491b5432ec49452abeeb053314df71852a78022c074a66a5aaeff2a15dc1b"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-internetarchive-4.0.1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "d28f27eb35af4b6076e764f0a251ced6e577f7c6e6c8cfc42a21026d17e6179b"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
