@@ -8,6 +8,11 @@ class Mopidy < Formula
   license "Apache-2.0"
   head "https://github.com/mopidy/mopidy.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-4.0.2"
+    sha256 cellar: :any, arm64_tahoe: "69c1af29ae88b325670e95a1793ce07fb731e6e7a7904dfffe2cf2f2b9454db2"
+  end
+
   depends_on "rust" => :build # for pydantic-core
   depends_on "gstreamer" # Mopidy requires GStreamer >= 1.26.2
   depends_on "pygobject3"
