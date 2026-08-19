@@ -7,6 +7,11 @@ class MopidySpotify < Formula
   sha256 "d8f24bf897f6ac35eb38a87f9884f74a9fcca54fc48c42f6ea45c76239991cc2"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-spotify-5.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "abb374652f6f5d35f29bf6df0f2ab3bf0889b641854eb7f68e3474bc96cbd953"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
