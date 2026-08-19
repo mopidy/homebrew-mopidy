@@ -7,6 +7,11 @@ class MopidyMpd < Formula
   sha256 "89630424725139e537614fa89655a278019058e218488f9115641bdc0184dcdc"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-mpd-4.0.1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "d343a331239be942bbf71d74bded013ccf24b587e608ae636633ddf4ecf5d1c7"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
