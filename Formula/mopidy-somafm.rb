@@ -1,31 +1,30 @@
 class MopidySomafm < Formula
-  desc "Mopidy extension for playing music from SomaFM"
+  include Language::Python::Virtualenv
+
+  desc "SomaFM backend for the Mopidy music server"
   homepage "https://github.com/AlexandrePTJ/mopidy-somafm"
-  url "https://files.pythonhosted.org/packages/0e/6a/4cc6c5d1c813ec98343f24be7df3318acf118d2920ceeea6b6d31da1f1f0/Mopidy-SomaFM-2.0.2.tar.gz"
-  sha256 "0c2d1e9b192859f8c61e28760bc9c8341141c9fe76d577fedcab38251c4d3cb3"
-  head "https://github.com/AlexandrePTJ/mopidy-somafm.git"
-  revision 2
+  url "https://files.pythonhosted.org/packages/c2/f0/10f14a661cce539d0d46611b2c283e38530591c2a811eab7fc954fb9e9bf/mopidy_somafm-2.1.0.tar.gz"
+  sha256 "77bcabde36d9dbc4a3e48d3a8b7e31bf166d5e7ca75b97faf887a6e6543a119e"
+  license "Apache-2.0"
 
-  depends_on "python@3.12"
   depends_on "mopidy/mopidy/mopidy"
-
-  # Dependencies assumed bundled by mopidy:
-  # - pykka
-  # - requests
+  # The Python version must match the mopidy formula's.
+  depends_on "python@3.14"
 
   def install
-    python3 = Formula["python@3.12"].opt_bin/"python3.12"
+    virtualenv_install_with_resources
 
-    system python3, *Language::Python.setup_install_args(libexec, python=python3)
-
-    xy = Language::Python.major_minor_version python3
-    site_packages = "lib/python#{xy}/site-packages"
-    pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
-    (prefix/site_packages/"homebrew-mopidy-somafm.pth").write pth_contents
+    # Register the extension with the mopidy formula's venv: this .pth file
+    # gets linked into HOMEBREW_PREFIX/lib/python3.14/site-packages, which
+    # the brewed python processes at startup (also inside mopidy's venv, as
+    # it is created with --system-site-packages).
+    site_packages = Language::Python.site_packages("python3.14")
+    (prefix/site_packages/"homebrew-mopidy-somafm.pth").write \
+      "import site; site.addsitedir('#{libexec/site_packages}')\n"
   end
 
   test do
-    python3 = Formula["python@3.12"].opt_bin/"python3.12"
-    system python3, "-c", "import mopidy_somafm"
+    mopidy = formula_opt_bin("mopidy/mopidy/mopidy")/"mopidy"
+    assert_match "[somafm]", shell_output("#{mopidy} config")
   end
 end

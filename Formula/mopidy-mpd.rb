@@ -1,37 +1,30 @@
 class MopidyMpd < Formula
-  desc "Mopidy extension for controlling Mopidy from MPD clients"
+  include Language::Python::Virtualenv
+
+  desc "MPD protocol frontend for the Mopidy music server"
   homepage "https://github.com/mopidy/mopidy-mpd"
-  url "https://files.pythonhosted.org/packages/8a/45/2ae38c8e83c7e7fd49bda4ce2ee3cd7b2454837ab763a5be192ac657bf98/Mopidy-MPD-3.3.0.tar.gz"
-  sha256 "09e2cc46a8fd73006f42b3b1ed71d557c3230e3c0ea2c38d565b0dda8faf4d53"
-  head "https://github.com/mopidy/mopidy-mpd.git"
-  revision 2
+  url "https://files.pythonhosted.org/packages/f5/64/45475aea10f31e4bc4f71cbd82206ed6ec124a0b71857adfa96454550764/mopidy_mpd-4.0.1.tar.gz"
+  sha256 "89630424725139e537614fa89655a278019058e218488f9115641bdc0184dcdc"
+  license "Apache-2.0"
 
-  depends_on "python@3.12"
   depends_on "mopidy/mopidy/mopidy"
-
-  # Dependencies assumed bundled by mopidy:
-  # - pykka
-  # - requests
+  # The Python version must match the mopidy formula's.
+  depends_on "python@3.14"
 
   def install
-    python3 = Formula["python@3.12"].opt_bin/"python3.12"
+    virtualenv_install_with_resources
 
-    resources.each do |r|
-      r.stage do
-        system python3, *Language::Python.setup_install_args(libexec, python=python3)
-      end
-    end
-
-    system python3, *Language::Python.setup_install_args(libexec, python=python3)
-
-    xy = Language::Python.major_minor_version python3
-    site_packages = "lib/python#{xy}/site-packages"
-    pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
-    (prefix/site_packages/"homebrew-mopidy-mpd.pth").write pth_contents
+    # Register the extension with the mopidy formula's venv: this .pth file
+    # gets linked into HOMEBREW_PREFIX/lib/python3.14/site-packages, which
+    # the brewed python processes at startup (also inside mopidy's venv, as
+    # it is created with --system-site-packages).
+    site_packages = Language::Python.site_packages("python3.14")
+    (prefix/site_packages/"homebrew-mopidy-mpd.pth").write \
+      "import site; site.addsitedir('#{libexec/site_packages}')\n"
   end
 
   test do
-    python3 = Formula["python@3.12"].opt_bin/"python3.12"
-    system python3, "-c", "import mopidy_mpd"
+    mopidy = formula_opt_bin("mopidy/mopidy/mopidy")/"mopidy"
+    assert_match "[mpd]", shell_output("#{mopidy} config")
   end
 end

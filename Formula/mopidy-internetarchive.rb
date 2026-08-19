@@ -1,47 +1,65 @@
 class MopidyInternetarchive < Formula
-  desc "Mopidy extension for playing music from the Internet Archive"
+  include Language::Python::Virtualenv
+
+  desc "Internet Archive backend for the Mopidy music server"
   homepage "https://github.com/tkem/mopidy-internetarchive"
-  url "https://files.pythonhosted.org/packages/21/9c/98fd4ec4372605187fca0fad02b98e341ec97bb2f63385cc9a379850944c/Mopidy-InternetArchive-3.0.1.tar.gz"
-  sha256 "800efa2ccf0c6e99e1eec8599d6f7fc31f153c6c5a2028083c38b4a90884d10a"
-  head "https://github.com/tkem/mopidy-internetarchive.git"
-  revision 2
+  url "https://files.pythonhosted.org/packages/b1/0f/7710454f4b486445fbf9a97076a1610fa4490ade2ef6595d53d21650e9b2/mopidy_internetarchive-4.0.1.tar.gz"
+  sha256 "9d0491b5432ec49452abeeb053314df71852a78022c074a66a5aaeff2a15dc1b"
+  license "Apache-2.0"
 
-  depends_on "python@3.12"
   depends_on "mopidy/mopidy/mopidy"
-
-  # Dependencies assumed bundled by mopidy:
-  # - pykka
-  # - requests
+  # The Python version must match the mopidy formula's.
+  depends_on "python@3.14"
 
   resource "cachetools" do
-    url "https://files.pythonhosted.org/packages/4d/91/5837e9f9e77342bb4f3ffac19ba216eef2cd9b77d67456af420e7bafe51d/cachetools-5.3.0.tar.gz"
-    sha256 "13dfddc7b8df938c21a940dfa6557ce6e94a2f1cdfa58eb90c805721d58f2c14"
+    url "https://files.pythonhosted.org/packages/70/d2/47e8bc06fe2a06d3f5bdf20f1126ab66c4e99dc48d940e7ba873f7ac7131/cachetools-7.1.7.tar.gz"
+    sha256 "a3e2a00b14d8f8a6b70c1dae7b4685e7ad3bc965c5b42124a2d6ce895da6cf50"
+  end
+
+  resource "certifi" do
+    url "https://files.pythonhosted.org/packages/a3/c2/24167ea9858356b47a87a50d39908bfdb72ceeefe0041586e704e5376b3a/certifi-2026.7.22.tar.gz"
+    sha256 "741e2c3b351ddf169a738da9f2c048608ff7f2c5cc02f1ebc6b118bb090d5d55"
+  end
+
+  resource "charset-normalizer" do
+    url "https://files.pythonhosted.org/packages/e5/3f/143b048436775b0f76ac3eec145c019e8173ccc2885c8f20319b996d5e83/charset_normalizer-3.5.1.tar.gz"
+    sha256 "6117b84ea48435e5356dc737f5121485c30920ba43375fa7b434fd753df0eac3"
+  end
+
+  resource "idna" do
+    url "https://files.pythonhosted.org/packages/5f/f7/abb373e5757eaec4b922b92f97ec8d6d7e057cf06778247604fbc4e7c3f3/idna-3.19.tar.gz"
+    sha256 "5e0811a4383b21dc5838069f801c4fb62113b7447663d2530d2bd6e77b49bf15"
+  end
+
+  resource "requests" do
+    url "https://files.pythonhosted.org/packages/ac/c3/e2a2b89f2d3e2179abd6d00ebd70bff6273f37fb3e0cc209f48b39d00cbf/requests-2.34.2.tar.gz"
+    sha256 "f288924cae4e29463698d6d60bc6a4da69c89185ad1e0bcc4104f584e960b9ed"
   end
 
   resource "uritools" do
-    url "https://files.pythonhosted.org/packages/4d/8b/f49813253c29c49a3767256cbe94a2450d3377953fedcd8e62be200c0ba0/uritools-4.0.1.tar.gz"
-    sha256 "efc5c3a6de05404850685a8d3f34da8476b56aa3516fbf8eff5c8704c7a2826f"
+    url "https://files.pythonhosted.org/packages/a3/0d/20d02264b6682f07e92cbf7ee43e5e803670d101a03ef204ba18368c321f/uritools-6.1.3.tar.gz"
+    sha256 "3a498e7e85ef3249343d5710618d641a414da0fbae6d23053ada7976ee83ea5f"
+  end
+
+  resource "urllib3" do
+    url "https://files.pythonhosted.org/packages/53/0c/06f8b233b8fd13b9e5ee11424ef85419ba0d8ba0b3138bf360be2ff56953/urllib3-2.7.0.tar.gz"
+    sha256 "231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c"
   end
 
   def install
-    python3 = Formula["python@3.12"].opt_bin/"python3.12"
+    virtualenv_install_with_resources
 
-    resources.each do |r|
-      r.stage do
-        system python3, *Language::Python.setup_install_args(libexec, python=python3)
-      end
-    end
-
-    system python3, *Language::Python.setup_install_args(libexec, python=python3)
-
-    xy = Language::Python.major_minor_version python3
-    site_packages = "lib/python#{xy}/site-packages"
-    pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
-    (prefix/site_packages/"homebrew-mopidy-internetarchive.pth").write pth_contents
+    # Register the extension with the mopidy formula's venv: this .pth file
+    # gets linked into HOMEBREW_PREFIX/lib/python3.14/site-packages, which
+    # the brewed python processes at startup (also inside mopidy's venv, as
+    # it is created with --system-site-packages).
+    site_packages = Language::Python.site_packages("python3.14")
+    (prefix/site_packages/"homebrew-mopidy-internetarchive.pth").write \
+      "import site; site.addsitedir('#{libexec/site_packages}')\n"
   end
 
   test do
-    python3 = Formula["python@3.12"].opt_bin/"python3.12"
-    system python3, "-c", "import mopidy_internetarchive"
+    mopidy = formula_opt_bin("mopidy/mopidy/mopidy")/"mopidy"
+    assert_match "[internetarchive]", shell_output("#{mopidy} config")
   end
 end

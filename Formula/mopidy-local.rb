@@ -1,42 +1,35 @@
 class MopidyLocal < Formula
-  desc "Mopidy extension for playing music from your music archive"
+  include Language::Python::Virtualenv
+
+  desc "Local music library backend for the Mopidy music server"
   homepage "https://github.com/mopidy/mopidy-local"
-  url "https://files.pythonhosted.org/packages/06/c3/5426543db3a53285ab1e45ad5e3ca261a41db20838ce68038c4ee0f7d41d/Mopidy-Local-3.2.1.tar.gz"
-  sha256 "29165157134fe869228da675e4d0083888368a29dc7dd3203fe1a27d7b4d83a3"
-  head "https://github.com/mopidy/mopidy-local.git"
-  revision 2
+  url "https://files.pythonhosted.org/packages/6f/09/7fb58d8dda7701b22438b09538054fed31f4ca7d9a1db6280d87660f44fd/mopidy_local-4.0.1.tar.gz"
+  sha256 "0becc68bcd637f39a8e89f62cda489feb76354279065c3673d1fbf6a0beb5708"
+  license "Apache-2.0"
 
-  depends_on "python@3.12"
   depends_on "mopidy/mopidy/mopidy"
-
-  # Dependencies assumed bundled by mopidy:
-  # - pykka
-  # - requests
+  # The Python version must match the mopidy formula's.
+  depends_on "python@3.14"
 
   resource "uritools" do
-    url "https://files.pythonhosted.org/packages/4d/8b/f49813253c29c49a3767256cbe94a2450d3377953fedcd8e62be200c0ba0/uritools-4.0.1.tar.gz"
-    sha256 "efc5c3a6de05404850685a8d3f34da8476b56aa3516fbf8eff5c8704c7a2826f"
+    url "https://files.pythonhosted.org/packages/a3/0d/20d02264b6682f07e92cbf7ee43e5e803670d101a03ef204ba18368c321f/uritools-6.1.3.tar.gz"
+    sha256 "3a498e7e85ef3249343d5710618d641a414da0fbae6d23053ada7976ee83ea5f"
   end
 
   def install
-    python3 = Formula["python@3.12"].opt_bin/"python3.12"
+    virtualenv_install_with_resources
 
-    resources.each do |r|
-      r.stage do
-        system python3, *Language::Python.setup_install_args(libexec, python=python3)
-      end
-    end
-
-    system python3, *Language::Python.setup_install_args(libexec, python=python3)
-
-    xy = Language::Python.major_minor_version python3
-    site_packages = "lib/python#{xy}/site-packages"
-    pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
-    (prefix/site_packages/"homebrew-mopidy-local.pth").write pth_contents
+    # Register the extension with the mopidy formula's venv: this .pth file
+    # gets linked into HOMEBREW_PREFIX/lib/python3.14/site-packages, which
+    # the brewed python processes at startup (also inside mopidy's venv, as
+    # it is created with --system-site-packages).
+    site_packages = Language::Python.site_packages("python3.14")
+    (prefix/site_packages/"homebrew-mopidy-local.pth").write \
+      "import site; site.addsitedir('#{libexec/site_packages}')\n"
   end
 
   test do
-    python3 = Formula["python@3.12"].opt_bin/"python3.12"
-    system python3, "-c", "import mopidy_local"
+    mopidy = formula_opt_bin("mopidy/mopidy/mopidy")/"mopidy"
+    assert_match "[local]", shell_output("#{mopidy} config")
   end
 end
