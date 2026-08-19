@@ -7,6 +7,11 @@ class MopidySoundcloud < Formula
   sha256 "87c1e12fb360e6447aea2164337c3f2b373ef609b66a3b7d772f98a807798b3d"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-soundcloud-4.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "53c6cfa646eef68f4d5af78534a587e504c46ec266e9b7f67dfafbdda8ac6669"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
