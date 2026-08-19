@@ -7,6 +7,11 @@ class MopidyScrobbler < Formula
   sha256 "91805a879794646c054cf97237e20b8ca7195695b87b5f95152bb639294df52c"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-scrobbler-3.1.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "5318fba6e032eba63213cb01ea43cd55c42ac84511eb515748a36698d9a28bb2"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
