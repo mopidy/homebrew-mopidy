@@ -7,6 +7,11 @@ class MopidyNad < Formula
   sha256 "641dabb84c99f1345a6a771299ea91d8aefc7b5810425c686e7a402fec40f305"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-nad-4.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "0ba12fa6577725d6566089e3012d724e3446909d8a80e32d91885744fabfb075"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
