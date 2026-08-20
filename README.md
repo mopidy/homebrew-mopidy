@@ -30,10 +30,16 @@ Or run it directly in a terminal with `mopidy`.
 | Formula | Description |
 | --- | --- |
 | `mopidy` | The Mopidy music server itself |
+| `mopidy-api-explorer` | HTTP API explorer |
 | `mopidy-beets` | Beets backend |
 | `mopidy-internetarchive` | Internet Archive backend |
+| `mopidy-listenbrainz` | ListenBrainz scrobbler |
 | `mopidy-local` | Local music library backend |
 | `mopidy-mpd` | MPD protocol frontend |
+| `mopidy-nad` | NAD amplifier control |
+| `mopidy-orfradio` | ORF Austrian radio backend |
+| `mopidy-pandora` | Pandora backend |
+| `mopidy-pibox` | Party jukebox web client |
 | `mopidy-podcast` | Podcast backend |
 | `mopidy-podcast-itunes` | Apple iTunes Store podcast directory |
 | `mopidy-scrobbler` | Last.fm scrobbler |
