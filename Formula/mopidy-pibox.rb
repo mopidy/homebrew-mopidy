@@ -7,6 +7,11 @@ class MopidyPibox < Formula
   sha256 "bceed8e270538a0bf286e9e19b13582c0795fb852af62f26028b96ea5a0ab761"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-pibox-4.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "abaead601c6456a5d259b9b2b0ebdadeaa76f0289c63748843869e644d5a63e2"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
