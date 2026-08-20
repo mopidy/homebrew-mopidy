@@ -7,6 +7,11 @@ class MopidyOrfradio < Formula
   sha256 "0bed6b5d226cf268bbd0e69eea430fd4dacee87afe4d1239791cab923bde2958"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-orfradio-3.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "df8605d0910d756eafd15edd2203616d55e74ce0ba27721665bccbbdff67ebbc"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
