@@ -7,6 +7,11 @@ class MopidyApiExplorer < Formula
   sha256 "a5ea4170aaee7a4fe015e0201745eb3436e05358511dc0dc18d525a40b360ded"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-api-explorer-2.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "161d2a47765913ac2f2855394466a7c48e745abda7eed26a12da304aaa5aa337"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
