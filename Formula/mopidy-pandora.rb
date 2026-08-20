@@ -7,6 +7,11 @@ class MopidyPandora < Formula
   sha256 "9cf6b643b860eb083c35693dcb086e3698b8664305a0e8563f577ee52399a254"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-pandora-2.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "7cb35aa65f3f2910cd52feeb312763a1d611e562893666c9de8dc7cb573228a1"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
