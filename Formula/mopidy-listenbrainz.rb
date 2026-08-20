@@ -7,6 +7,11 @@ class MopidyListenbrainz < Formula
   sha256 "deefea8131f668469ddb24bdabeeb03b4b6ca97232fa12248363f88d14b05da4"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-listenbrainz-0.4.1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "0c190c56e07db57cadcb48311f18961e3abe397baa9efc4ed04ca58b17081751"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
