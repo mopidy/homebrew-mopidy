@@ -27,6 +27,10 @@ jobs:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@a657b8b0cd35d0f65cce41fce9b24cf054b49869 # 2026.08.24.1
+        with:
+          # brew bump loads formulas from homebrew/core (e.g. python@3.X)
+          # when regenerating a bumped formula's Python resources.
+          core: true
 
       - name: Set up git
         id: git_setup
