@@ -36,6 +36,13 @@ jobs:
         id: git_setup
         uses: Homebrew/actions/git-user-config@a657b8b0cd35d0f65cce41fce9b24cf054b49869 # 2026.08.24.1
 
+      # When regenerating a bumped formula's Python resources, pip resolves
+      # the full dependency tree, including mopidy's pygobject dependency.
+      # PyGObject and pycairo have no Linux wheels, so pip builds their
+      # metadata from source, which needs these headers.
+      - name: Install PyGObject build dependencies
+        run: sudo apt-get update && sudo apt-get install -y libcairo2-dev libgirepository-2.0-dev
+
       - name: Bump formulae
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
