@@ -16,6 +16,8 @@ class MopidyOrfradio < Formula
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
 
+  pypi_packages exclude_packages: "mopidy"
+
   resource "beaker" do
     url "https://files.pythonhosted.org/packages/83/6b/3cd3dcf40417e3be31a3a2257957144b0c058ffaf9ca32d2c83c85567cb6/beaker-1.14.1.tar.gz"
     sha256 "886f52a51810703fdbc0a3e54fca40886288ff530b2070582edce72bf1945447"

@@ -16,6 +16,8 @@ class MopidyListenbrainz < Formula
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
 
+  pypi_packages exclude_packages: "mopidy"
+
   resource "musicbrainzngs" do
     url "https://files.pythonhosted.org/packages/0a/67/3e74ae93d90ceeba72ed1a266dd3ca9abd625f315f0afd35f9b034acedd1/musicbrainzngs-0.7.1.tar.gz"
     sha256 "ab1c0100fd0b305852e65f2ed4113c6de12e68afd55186987b8ed97e0f98e627"

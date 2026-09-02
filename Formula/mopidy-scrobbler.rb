@@ -16,6 +16,8 @@ class MopidyScrobbler < Formula
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
 
+  pypi_packages exclude_packages: "mopidy"
+
   resource "anyio" do
     url "https://files.pythonhosted.org/packages/61/cc/a381afa6efea9f496eff839d4a6a1aed3bfafc7b3ab4b0d1b243a12573dd/anyio-4.14.2.tar.gz"
     sha256 "cfa139f3ed1a23ee8f88a145ddb5ac7605b8bbfd8592baacd7ce3d8bb4313c7f"
