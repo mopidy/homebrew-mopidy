@@ -16,6 +16,8 @@ class MopidySoundcloud < Formula
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
 
+  pypi_packages exclude_packages: "mopidy"
+
   resource "beautifulsoup4" do
     url "https://files.pythonhosted.org/packages/43/65/318323f98dbee45d42dff61d8f047181bc6f2268a9068cfad035a46be5af/beautifulsoup4-4.15.0.tar.gz"
     sha256 "288e3ca7d54b06f2ac191970bc275c1939cb46d450b255bf6718b04aa37ab4f7"

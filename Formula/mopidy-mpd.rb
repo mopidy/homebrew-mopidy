@@ -16,6 +16,8 @@ class MopidyMpd < Formula
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
 
+  pypi_packages exclude_packages: "mopidy"
+
   def install
     virtualenv_install_with_resources
 

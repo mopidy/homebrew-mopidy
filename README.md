@@ -129,15 +129,16 @@ If the new version changed its Python dependencies, regenerate the
 `resource` blocks:
 
 ```sh
-brew update-python-resources --exclude-packages=pygobject mopidy/mopidy/mopidy
+brew update-python-resources mopidy/mopidy/<formula>
 ```
 
-For extension formulas, also exclude everything provided by the mopidy
-formula's virtualenv:
-
-```sh
-brew update-python-resources --exclude-packages="mopidy pygobject pykka" mopidy/mopidy/<formula>
-```
+Every formula declares a `pypi_packages exclude_packages:` stanza, which
+both `brew update-python-resources` and `brew bump` use to leave out the
+packages that are provided by other formulas: the mopidy formula
+excludes `pygobject` (provided by `pygobject3`), and the extension
+formulas exclude `mopidy` (whose whole dependency tree they get from the
+mopidy formula's virtualenv at runtime). Excluding a package also prunes
+its entire dependency subtree.
 
 Caveats:
 
@@ -175,14 +176,17 @@ mopidy config
    (`mopidy-somafm.rb` has no extra resources, `mopidy-beets.rb` bundles
    a dependency tree).
 2. Set `desc`, `homepage`, `url` (PyPI sdist), `sha256`, and `license`.
-3. Generate resources as described above, excluding `mopidy`,
-   `pygobject`, and `pykka`.
-4. Keep the `.pth` block in `def install`, replacing the formula name in
+3. Keep the `pypi_packages exclude_packages: "mopidy"` stanza — it is
+   required for `brew bump` and `brew update-python-resources` to
+   generate correct resources. If the extension depends on another
+   extension formula, exclude that too.
+4. Generate resources as described above.
+5. Keep the `.pth` block in `def install`, replacing the formula name in
    the `.pth` filename.
-5. Point the `test` block's `assert_match` at the extension's config
+6. Point the `test` block's `assert_match` at the extension's config
    section name (check with `mopidy config` — it is usually, but not
    always, the extension name without the `mopidy-` prefix).
-6. Run the full local testing checklist above.
+7. Run the full local testing checklist above.
 
 ### Releasing (bottles)
 

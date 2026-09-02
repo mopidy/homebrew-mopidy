@@ -16,6 +16,8 @@ class MopidyPandora < Formula
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
 
+  pypi_packages exclude_packages: "mopidy"
+
   resource "blowfish" do
     url "https://files.pythonhosted.org/packages/ca/06/6008f79f3df714da4eeb6d7daf5e417e072c69923d22ede09171e74d69f8/blowfish-0.6.1.tar.bz2"
     sha256 "1626d96d2672a6cf021d9b66a5013b6e594865403b4a06d75034e0a9ff1cbdc6"
