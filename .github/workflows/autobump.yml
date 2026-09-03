@@ -10,6 +10,9 @@ on:
   schedule:
     # Every day at 16:25 UTC
     - cron: 25 16 * * *
+  # Manual runs bump formulas on demand, e.g. right after an upstream
+  # release, instead of waiting for the daily scheduled run.
+  workflow_dispatch:
 
 permissions: {}
 
