@@ -21,8 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       actions: read
+      attestations: write
       checks: read
       contents: write
+      id-token: write
       issues: read
       pull-requests: write
     steps:
@@ -36,6 +38,7 @@ jobs:
         uses: Homebrew/actions/git-user-config@f8d4222eb633e65c2a0157383cf80861fc7fae7f # 2026.09.07.1
 
       - name: Pull bottles
+        id: pull_bottles
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HOMEBREW_GIT_COMMITTER_NAME: ${{ steps.git_setup.outputs.name }}
@@ -45,10 +48,16 @@ jobs:
         run: |
           if [[ -n "$HEAD_SHA" ]]
           then
-            brew pr-pull --debug --tap="$GITHUB_REPOSITORY" --head-sha="$HEAD_SHA" "$PULL_REQUEST"
+            brew pr-pull --debug --retain-bottle-dir --tap="$GITHUB_REPOSITORY" --head-sha="$HEAD_SHA" \
+              "$PULL_REQUEST"
           else
-            brew pr-pull --debug --tap="$GITHUB_REPOSITORY" "$PULL_REQUEST"
+            brew pr-pull --debug --retain-bottle-dir --tap="$GITHUB_REPOSITORY" "$PULL_REQUEST"
           fi
+
+      - name: Generate build provenance
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4.2.2
+        with:
+          subject-path: "${{ steps.pull_bottles.outputs.bottle_path }}/*.tar.gz"
 
       - name: Push commits
         uses: Homebrew/actions/git-try-push@f8d4222eb633e65c2a0157383cf80861fc7fae7f # 2026.09.07.1
