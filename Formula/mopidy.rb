@@ -3,8 +3,8 @@ class Mopidy < Formula
 
   desc "Extensible music server written in Python"
   homepage "https://mopidy.com/"
-  url "https://files.pythonhosted.org/packages/50/e0/a9c5b131b92b204e98e582485eb195b942a5aaa2f9f0989a8426ea95d59e/mopidy-4.0.3.tar.gz"
-  sha256 "1245d627cf69da968cd42473ca4b0a2edadfb76e8f74f4128f483edc3f28b4ae"
+  url "https://files.pythonhosted.org/packages/6c/bc/4ec8b91ebc7c64e10dd22d13f583b5d5ae9d18b404e08717449e9893bb39/mopidy-4.0.4.tar.gz"
+  sha256 "cdceb64e1574d708396bf8ee9f71460df3614dbb9c6aee36b24e23b90492501f"
   license "Apache-2.0"
   head "https://github.com/mopidy/mopidy.git", branch: "main"
 
@@ -42,8 +42,8 @@ class Mopidy < Formula
   end
 
   resource "cyclopts" do
-    url "https://files.pythonhosted.org/packages/97/62/92422b2ed96d82492dc3e22c0d481f14eba3846a099fd5204575a0a4ffa2/cyclopts-4.25.0.tar.gz"
-    sha256 "251e6120d1baf4504ef0e74c0fa96837793898393870784dcaa77957adcde41d"
+    url "https://files.pythonhosted.org/packages/16/8f/6caec9cf291ba294a0d0669b0388e5676d8887d8b75a8c3ad0a2dc2eeed9/cyclopts-4.25.2.tar.gz"
+    sha256 "0776bc1fa796cd351646c345b7420279e58d6c2c4a8f5d5dd54dea85bdb2de8f"
   end
 
   resource "docstring-parser" do
@@ -82,8 +82,8 @@ class Mopidy < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/69/b7/802a56eca9f2fac455b8bab5375a2647b0f0e14a2cd63ef077de3c4a7658/platformdirs-4.11.7.tar.gz"
-    sha256 "4f41487eeeeeb07f3a6625e61d9bc0ae6809f92d3386dbd74392fbb76108104d"
+    url "https://files.pythonhosted.org/packages/53/18/f3bb8ef0d3b930692343da8aa4d3cbcd6749477c053959395ac81965a6e9/platformdirs-4.11.8.tar.gz"
+    sha256 "f23abafea7dd4276d1f29104b83598d7dcc567cafd07c9c951e66665645437fc"
   end
 
   resource "pydantic" do
