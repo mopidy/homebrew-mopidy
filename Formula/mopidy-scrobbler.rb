@@ -8,8 +8,8 @@ class MopidyScrobbler < Formula
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-scrobbler-3.1.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "5318fba6e032eba63213cb01ea43cd55c42ac84511eb515748a36698d9a28bb2"
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-scrobbler-3.1.1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "eb58d6694b751833fc330345c3e565c9960f51a161f26aa7607df0c3720ab763"
   end
 
   depends_on "mopidy/mopidy/mopidy"
