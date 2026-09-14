@@ -8,8 +8,8 @@ class MopidySpotify < Formula
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-spotify-5.0.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "abb374652f6f5d35f29bf6df0f2ab3bf0889b641854eb7f68e3474bc96cbd953"
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-spotify-5.0.1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "9f9ea06f67d909bce6b88b4334a68e174cab39871c30578b73d33c60d11fe53c"
   end
 
   depends_on "mopidy/mopidy/mopidy"
