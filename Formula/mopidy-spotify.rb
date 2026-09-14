@@ -3,8 +3,8 @@ class MopidySpotify < Formula
 
   desc "Spotify backend for the Mopidy music server"
   homepage "https://github.com/mopidy/mopidy-spotify"
-  url "https://files.pythonhosted.org/packages/91/f1/1ca13cdde6689c810558396d58476706765d5b9c898385f1994eeb967056/mopidy_spotify-5.0.0.tar.gz"
-  sha256 "d8f24bf897f6ac35eb38a87f9884f74a9fcca54fc48c42f6ea45c76239991cc2"
+  url "https://files.pythonhosted.org/packages/66/88/0fe5a503aae1e237c154546cd086f3a4d5c1ec8cabc63eff2c7296b21c4e/mopidy_spotify-5.0.1.tar.gz"
+  sha256 "54877fec64fe2201d6dfe12a7c5815c3f3a66cacc14cd44f87fc0824c715b16e"
   license "Apache-2.0"
 
   bottle do
@@ -18,19 +18,9 @@ class MopidySpotify < Formula
 
   pypi_packages exclude_packages: "mopidy"
 
-  resource "certifi" do
-    url "https://files.pythonhosted.org/packages/a3/c2/24167ea9858356b47a87a50d39908bfdb72ceeefe0041586e704e5376b3a/certifi-2026.7.22.tar.gz"
-    sha256 "741e2c3b351ddf169a738da9f2c048608ff7f2c5cc02f1ebc6b118bb090d5d55"
-  end
-
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/e5/3f/143b048436775b0f76ac3eec145c019e8173ccc2885c8f20319b996d5e83/charset_normalizer-3.5.1.tar.gz"
     sha256 "6117b84ea48435e5356dc737f5121485c30920ba43375fa7b434fd753df0eac3"
-  end
-
-  resource "idna" do
-    url "https://files.pythonhosted.org/packages/5f/f7/abb373e5757eaec4b922b92f97ec8d6d7e057cf06778247604fbc4e7c3f3/idna-3.19.tar.gz"
-    sha256 "5e0811a4383b21dc5838069f801c4fb62113b7447663d2530d2bd6e77b49bf15"
   end
 
   resource "requests" do
