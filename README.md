@@ -46,6 +46,7 @@ Or run it directly in a terminal with `mopidy`.
 | `mopidy-somafm` | SomaFM backend |
 | `mopidy-soundcloud` | SoundCloud backend |
 | `mopidy-spotify` | Spotify backend |
+| `mopidy-tunein` | TuneIn backend |
 
 Other Mopidy extensions from PyPI can be installed into Mopidy's
 virtualenv with pip, but such installs are not managed by Homebrew and
