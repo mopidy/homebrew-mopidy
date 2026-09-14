@@ -7,6 +7,11 @@ class MopidyTunein < Formula
   sha256 "f74683ca63c7d59852f24b3661afa31303fdbdc1af5d115529fc4003e4fd47a3"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-tunein-2.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "18ee1faa8909542334f2c90f39cc0e592a94f3a6229a5be07d9477202187261a"
+  end
+
   depends_on "mopidy/mopidy/mopidy"
   # The Python version must match the mopidy formula's.
   depends_on "python@3.14"
