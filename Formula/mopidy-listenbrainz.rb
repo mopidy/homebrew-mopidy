@@ -3,8 +3,8 @@ class MopidyListenbrainz < Formula
 
   desc "ListenBrainz scrobbler for the Mopidy music server"
   homepage "https://github.com/suaviloquence/mopidy-listenbrainz"
-  url "https://files.pythonhosted.org/packages/b7/ca/b10a11ccb7807b325aca5a673d26d8c6fadc99aa40570a7506703c7055ab/mopidy_listenbrainz-0.4.1.tar.gz"
-  sha256 "deefea8131f668469ddb24bdabeeb03b4b6ca97232fa12248363f88d14b05da4"
+  url "https://files.pythonhosted.org/packages/40/98/1c7533ec8782c07aecc8b916f44b4286cbe32aa51ee757e8d1071bd1d795/mopidy_listenbrainz-0.4.2.tar.gz"
+  sha256 "4b25dff35968f0c11b9cbd7f838292af149df2aff44c25433244e9e85762735c"
   license "Apache-2.0"
 
   bottle do
