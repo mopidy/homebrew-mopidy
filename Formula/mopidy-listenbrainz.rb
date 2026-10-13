@@ -8,8 +8,8 @@ class MopidyListenbrainz < Formula
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-listenbrainz-0.4.1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "0c190c56e07db57cadcb48311f18961e3abe397baa9efc4ed04ca58b17081751"
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-listenbrainz-0.4.2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "6e5fb4e669e3b81f37a0072a728b385a9f940c9a4e15a7d575b0ab1f5fe3fbf8"
   end
 
   depends_on "mopidy/mopidy/mopidy"
