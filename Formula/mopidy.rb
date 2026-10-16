@@ -9,8 +9,8 @@ class Mopidy < Formula
   head "https://github.com/mopidy/mopidy.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-4.0.4"
-    sha256 cellar: :any, arm64_tahoe: "22281a342b91c9da6dc3f66a3d7ee1bcd9a8ba02a52731639ad2adf7c4ff3873"
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-4.0.5"
+    sha256 cellar: :any, arm64_tahoe: "de1f5c4c2cdf206b47aefc426ef0e2f1b91ac8423038b27b03fc29c43c3e09b4"
   end
 
   depends_on "rust" => :build # for pydantic-core
