@@ -3,8 +3,8 @@ class MopidyPibox < Formula
 
   desc "Party jukebox web client for the Mopidy music server"
   homepage "https://github.com/gbannerman/mopidy-pibox"
-  url "https://files.pythonhosted.org/packages/3a/43/81e0159134d4a4479aac958a04ca209546c1928fbaeeb0665a694a22cf22/mopidy_pibox-4.0.2.tar.gz"
-  sha256 "e0a64389ba2e83bd9829f6ff6bf8c2a7a28e3883f63fdfd01d3d7875e4061dea"
+  url "https://files.pythonhosted.org/packages/69/5f/3523317b8d1acdc3c568565cccb05898989bdd6e283495972fcaa1398f00/mopidy_pibox-4.0.3.tar.gz"
+  sha256 "80eaa4902481be226916a1abc80db160f222f5fc2c1d93f2f15e44b5d3cf3772"
   license "Apache-2.0"
 
   bottle do
