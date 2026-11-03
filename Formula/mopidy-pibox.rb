@@ -8,8 +8,8 @@ class MopidyPibox < Formula
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-pibox-4.0.2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "254f0fd23905f99a423ed7ca0b6ba0b7db1d00dfcd5ffe7281e0df02a22e335d"
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-pibox-4.0.3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "5db6339271c04deda8eec0325c14143247ced6ad62460424f4698296c5ac64bf"
   end
 
   depends_on "mopidy/mopidy/mopidy"
