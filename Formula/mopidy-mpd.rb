@@ -3,8 +3,8 @@ class MopidyMpd < Formula
 
   desc "MPD protocol frontend for the Mopidy music server"
   homepage "https://github.com/mopidy/mopidy-mpd"
-  url "https://files.pythonhosted.org/packages/f5/64/45475aea10f31e4bc4f71cbd82206ed6ec124a0b71857adfa96454550764/mopidy_mpd-4.0.1.tar.gz"
-  sha256 "89630424725139e537614fa89655a278019058e218488f9115641bdc0184dcdc"
+  url "https://files.pythonhosted.org/packages/cc/63/f092fc48488890e2ec988d963e39c3f90f0fdbfb0b6e21c35db54a0d0a22/mopidy_mpd-4.1.0.tar.gz"
+  sha256 "00b291cf949c4ac93d9dd764022620b3e7739e964eba95d281477f3d35d38968"
   license "Apache-2.0"
 
   bottle do
