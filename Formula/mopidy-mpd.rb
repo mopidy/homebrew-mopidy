@@ -8,8 +8,8 @@ class MopidyMpd < Formula
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-mpd-4.0.1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "d343a331239be942bbf71d74bded013ccf24b587e608ae636633ddf4ecf5d1c7"
+    root_url "https://github.com/mopidy/homebrew-mopidy/releases/download/mopidy-mpd-4.1.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "6c4eef5bfe572623c98d48af3ff14fe75cedcd6447edc93325878c12ab981f6f"
   end
 
   depends_on "mopidy/mopidy/mopidy"
